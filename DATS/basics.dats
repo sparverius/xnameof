@@ -10,11 +10,24 @@
 #staload "./../SATS/basics.sats"
 
 
+implement nameof_dctkind(dct) = "dctkind"
 implement nameof_valkind(vlk) = "valkind"
-implement nameof_funkind(fnk) = "fnk"
+implement nameof_funkind(fnk) = "funkind"
 implement nameof_impkind(knd) = "impkind"
 implement nameof_funclo2(fc2) = "funclo2"
 
+
+implement
+nameof_tag_dctkind(dct) =
+(
+case+ dct of
+| DCKfun _ => "DCKfun"
+| DCKval _ => "DCKval"
+| DCKpraxi _ => "DCKpraxi"
+| DCKprfun _ => "DCKprfun"
+| DCKprval _ => "DCKprval"
+| DCKcastfn _ => "DCKcastfn"
+)
 
 implement
 nameof_tag_valkind(vlk) =

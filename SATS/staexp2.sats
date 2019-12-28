@@ -61,6 +61,15 @@ overload nameof with nameof_effs2expopt
 fun nameof_s2itm: nameof_type(s2itm)
 overload nameof with nameof_s2itm
 
+//
+  fun nameof_fmodenv: nameof_type(fmodenv)
+  fun nameof_fmodenvopt: nameof_type(fmodenvopt)
+  overload nameof with nameof_fmodenv
+  overload nameof with nameof_fmodenvopt
+
+  fun nameof_s2xtv: nameof_type(s2xtv)
+  overload nameof with nameof_s2xtv
+//
 
 (* ****** ****** *)
 

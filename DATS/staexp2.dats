@@ -50,7 +50,12 @@ implement nameof_labs2exp(ls2e) = "labs2exp"
 implement nameof_s2itm(x0) = "s2itm"
 implement nameof_abstdf2(x0) = "abstdf2"
 implement nameof_effs2expopt(x0) = "effs2expopt"
-
+//
+//
+implement nameof_fmodenv(x0) = "fmodenv"
+implement nameof_fmodenvopt(x0) = "fmodenvopt"
+implement nameof_s2xtv(x0) = "s2xtv"
+//
 
 (* ****** ****** *)
 

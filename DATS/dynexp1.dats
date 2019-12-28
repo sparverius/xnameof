@@ -46,6 +46,7 @@ implement nameof_v1ardeclist(x) = "v1ardeclist"
 implement nameof_f1undeclist(x) = "f1undeclist"
 implement nameof_d1cstdeclist(x) = "d1cstdeclist"
 implement nameof_d1eclist(x) = "d1eclist"
+implement nameof_d1eclistopt(x) = "d1eclistopt"
 
 implement{} nameof_labd1patlst(x) = "labd1patlst"
 implement{} nameof_labd1explst(x) = "labd1explst"

@@ -21,9 +21,11 @@
 *)
 
 
+implement nameof_t2xtv(x) = "t2xtv"
 implement nameof_t2ypelst(x) = "t2ypelst"
 implement nameof_t2ype(x0) = "t2ype"
 implement nameof_labt2ype(lt2p) = "labt2ype"
+implement nameof_labt2ypelst(lt2ps) = "labt2ypelst"
 
 //
 

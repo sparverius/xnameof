@@ -29,10 +29,12 @@ implement nameof_d2gualst(x) = "d2gualst"
 implement nameof_d2claulst(x) = "d2claulst"
 implement nameof_d2explst(x) = "d2explst"
 implement nameof_d2expopt(x) = "d2expopt"
+implement nameof_d2explstopt(x) = "d2explstopt"
 implement nameof_v2aldeclist(x) = "v2aldeclist"
 implement nameof_v2ardeclist(x) = "v2ardeclist"
 implement nameof_f2undeclist(x) = "f2undeclist"
 implement nameof_d2eclist(x) = "d2eclist"
+implement nameof_d2eclistopt(x) = "d2eclistopt"
 
 
 implement

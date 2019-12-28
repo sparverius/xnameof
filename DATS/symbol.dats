@@ -13,3 +13,4 @@
 
 
 implement nameof_symbol(x0) = "symbol"
+implement nameof_sym_t(x0) = "sym_t"

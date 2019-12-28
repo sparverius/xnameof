@@ -12,14 +12,16 @@
 #staload _ = "./nameof.dats"
 
 
-implement nameof_d3eclist(x) = "d3eclist"
 implement nameof_d3claulst(x) = "d3claulst"
 implement nameof_f3arglst(x) = "f3arglst"
 implement nameof_d3gualst(x) = "d3gualst"
 implement nameof_v3aldeclist(x) = "v3aldeclist"
 implement nameof_v3ardeclist(x) = "v3ardeclist"
 implement nameof_f3undeclist(x) = "f3undeclist"
+implement nameof_d3eclist(x) = "d3eclist"
+implement nameof_d3eclistopt(x) = "d3eclistopt"
 implement nameof_d3explst(x) = "d3explst"
+implement nameof_d3explstopt(x) = "d3explstopt"
 implement nameof_d3expopt(x) = "d3expopt"
 implement nameof_d3patlst(x) = "d3patlst"
 

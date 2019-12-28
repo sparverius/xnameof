@@ -32,9 +32,11 @@ overload nameof with nameof_d3gpat
 fun nameof_d3exp : nameof_type(d3exp)
 fun nameof_d3explst : nameof_type(d3explst)
 fun nameof_d3expopt : nameof_type(d3expopt)
+fun nameof_d3explstopt : nameof_type(d3explstopt)
 overload nameof with nameof_d3exp
 overload nameof with nameof_d3explst
 overload nameof with nameof_d3expopt
+overload nameof with nameof_d3explstopt
 
 fun nameof_t2pcast : nameof_type(t2pcast)
 overload nameof with nameof_t2pcast
@@ -56,8 +58,10 @@ overload nameof with nameof_f3undeclist
 
 fun nameof_d3ecl : nameof_type(d3ecl)
 fun nameof_d3eclist : nameof_type(d3eclist)
+fun nameof_d3eclistopt : nameof_type(d3eclistopt)
 overload nameof with nameof_d3ecl
 overload nameof with nameof_d3eclist
+overload nameof with nameof_d3eclistopt
 
 
 (* ****** ****** *)

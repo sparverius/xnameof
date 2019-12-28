@@ -33,14 +33,18 @@ fun{a:t@ype} nameof_option: (string, Option(a)) -> ret_type
 fun nameof_int : nameof_type(int)
 fun nameof_bool : nameof_type(bool)
 fun nameof_char : nameof_type(char)
+fun nameof_uint : nameof_type(uint)
 fun nameof_double : nameof_type(double)
 fun nameof_string : nameof_type(string)
+
 
 overload nameof with nameof_int
 overload nameof with nameof_bool
 overload nameof with nameof_char
+overload nameof with nameof_uint
 overload nameof with nameof_double
 overload nameof with nameof_string
+
 
 
 (* ****** ****** *)

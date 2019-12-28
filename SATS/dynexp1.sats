@@ -95,8 +95,10 @@ overload nameof with nameof_d1cstdeclist
 
 fun nameof_d1ecl : nameof_type(d1ecl)
 fun nameof_d1eclist : nameof_type(d1eclist)
+fun nameof_d1eclistopt : nameof_type(d1eclistopt)
 overload nameof with nameof_d1ecl
 overload nameof with nameof_d1eclist
+overload nameof with nameof_d1eclistopt
 
 fun nameof_abstdf1 : nameof_type(abstdf1)
 overload nameof with nameof_abstdf1

@@ -20,7 +20,8 @@ PATSOPT=$(PATSHOME)/bin/patsopt
 
 ######
 #
-CFLAGS=-O2
+CFLAGS=
+# CFLAGS=-O2
 #
 # CFLAGS=-g
 # CFLAGS=-g -O
@@ -157,6 +158,8 @@ clean:: ; $(RMF) xnameof_dats.c
 
 cleanall:: clean
 cleanall:: ; $(RMF) xnameof
+cleanall:: ; $(RMF) ./bin/xnameof
+cleanall:: ; $(RMF) ./lib/libxnameof.a
 # cleanall:: ; (cd $(XATSQ) && make cleanall)
 # cleanall:: ; $(RMF) $(XATSQ)/../../lib/libxatsopt.a
 

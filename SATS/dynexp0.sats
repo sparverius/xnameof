@@ -11,6 +11,9 @@ overload nameof with nameof_labd0patlst
 fun(*{}*) nameof_labd0explst : nameof_type(labd0explst)
 overload nameof with nameof_labd0explst
 
+fun nameof_a0typlstopt : nameof_type(a0typlstopt)
+overload nameof with nameof_a0typlstopt
+
 
 fun nameof_q0arg : nameof_type(q0arg)
 fun nameof_q0arglst : nameof_type(q0arglst)

@@ -25,6 +25,7 @@
 *)
 
 implement nameof_a0typlst(x) = "a0typlst"
+implement nameof_a0typlstopt(x) = "a0typlstopt"
 implement nameof_d0patlst(x) = "d0patlst"
 implement nameof_d0gualst(x) = "d0gualst"
 implement nameof_d0cstdeclist(x) = "d0cstdeclist"
@@ -39,7 +40,7 @@ implement nameof_sq0arglst(x) = "sq0arglst"
 implement nameof_ti0arglst(x) = "ti0arglst"
 implement(*{}*) nameof_labd0patlst(x) = "labd0patlst"
 implement(*{}*) nameof_labd0explst(x) = "labd0explst"
-implement nameof_f0undeclist(x) = "foundeclist"
+implement nameof_f0undeclist(x) = "f0undeclist"
 implement nameof_v0aldeclist(x) = "v0aldeclist"
 implement nameof_v0ardeclist(x) = "v0ardeclist"
 implement nameof_d0expopt(x) = "d0expopt"

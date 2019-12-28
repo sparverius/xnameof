@@ -16,7 +16,7 @@ BUILD/dynexp2_sats.o : HATS/x.hats SATS/nameof.sats
 BUILD/dynexp3_sats.o : HATS/x.hats SATS/nameof.sats
 BUILD/fixity_sats.o : HATS/x.hats SATS/nameof.sats
 BUILD/nameof0_sats.o : 
-BUILD/nameof_dats.o : 
+BUILD/nameof_dats.o : SATS/nameof.sats
 BUILD/basics_dats.o : HATS/libxatsopt.hats SATS/nameof.sats SATS/basics.sats
 BUILD/stamp0_dats.o : HATS/libxatsopt.hats SATS/nameof.sats SATS/stamp0.sats
 BUILD/symbol_dats.o : HATS/libxatsopt.hats SATS/nameof.sats SATS/symbol.sats DATS/nameof.dats

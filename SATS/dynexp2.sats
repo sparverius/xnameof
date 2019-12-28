@@ -74,9 +74,11 @@ overload nameof with nameof_d2gpat
 fun nameof_d2exp : nameof_type(d2exp)
 fun nameof_d2explst : nameof_type(d2explst)
 fun nameof_d2expopt : nameof_type(d2expopt)
+fun nameof_d2explstopt : nameof_type(d2explstopt)
 overload nameof with nameof_d2exp
 overload nameof with nameof_d2explst
 overload nameof with nameof_d2expopt
+overload nameof with nameof_d2explstopt
 
 fun nameof_v2aldecl : nameof_type(v2aldecl)
 fun nameof_v2aldeclist : nameof_type(v2aldeclist)
@@ -95,8 +97,10 @@ overload nameof with nameof_f2undeclist
 
 fun nameof_d2ecl : nameof_type(d2ecl)
 fun nameof_d2eclist : nameof_type(d2eclist)
+fun nameof_d2eclistopt : nameof_type(d2eclistopt)
 overload nameof with nameof_d2ecl
 overload nameof with nameof_d2eclist
+overload nameof with nameof_d2eclistopt
 
 fun nameof_impls2cst : nameof_type(impls2cst)
 overload nameof with nameof_impls2cst

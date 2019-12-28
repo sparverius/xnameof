@@ -34,7 +34,7 @@ fun{a:type} nameof_sl0abled : nameof_type(sl0abled(a))
 overload nameof with nameof_sl0abled
 
 fun nameof_labs0exp : nameof_type(labs0exp)
-overload nameof with nameof_labs0exp
+overload nameof with nameof_labs0exp of 1
 
 fun nameof_labs0explst : nameof_type(labs0explst)
 overload nameof with nameof_labs0explst
