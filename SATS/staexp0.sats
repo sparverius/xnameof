@@ -140,6 +140,53 @@ overload nameof with nameof_d0atypelst
 
 (* ****** ****** *)
 
+fun nameof_inner_t0intopt : nameof_type(Option(t0int))
+fun nameof_inner_i0dntlst : nameof_type(i0dntlst)
+fun nameof_inner_i0dntopt : nameof_type(i0dntopt)
+fun nameof_inner_labs0explst : nameof_type(labs0explst)
+fun nameof_inner_g0explst : nameof_type(g0explst)
+fun nameof_inner_g0marglst : nameof_type(g0marglst)
+fun nameof_inner_sort0lst : nameof_type(sort0lst)
+fun nameof_inner_sort0opt : nameof_type(sort0opt)
+fun nameof_inner_s0arglst : nameof_type(s0arglst)
+fun nameof_inner_s0rtconlst : nameof_type(s0rtconlst)
+fun nameof_inner_d0tsortlst : nameof_type(d0tsortlst)
+fun nameof_inner_s0marglst : nameof_type(s0marglst)
+fun nameof_inner_t0arglst : nameof_type(t0arglst)
+fun nameof_inner_t0marglst : nameof_type(t0marglst)
+fun nameof_inner_s0qualst : nameof_type(s0qualst)
+fun nameof_inner_s0unilst : nameof_type(s0unilst)
+fun nameof_inner_s0explst : nameof_type(s0explst)
+fun nameof_inner_s0expopt : nameof_type(s0expopt)
+fun nameof_inner_d0atconlst : nameof_type(d0atconlst)
+fun nameof_inner_d0atypelst : nameof_type(d0atypelst)
+fun nameof_inner_t0intopt : nameof_type(Option(t0int))
+
+overload nameof_inner with nameof_inner_t0intopt
+overload nameof_inner with nameof_inner_i0dntlst
+overload nameof_inner with nameof_inner_i0dntopt
+overload nameof_inner with nameof_inner_labs0explst
+overload nameof_inner with nameof_inner_g0explst
+overload nameof_inner with nameof_inner_g0marglst
+overload nameof_inner with nameof_inner_sort0lst
+overload nameof_inner with nameof_inner_sort0opt
+overload nameof_inner with nameof_inner_s0arglst
+overload nameof_inner with nameof_inner_s0rtconlst
+overload nameof_inner with nameof_inner_d0tsortlst
+overload nameof_inner with nameof_inner_s0marglst
+overload nameof_inner with nameof_inner_t0arglst
+overload nameof_inner with nameof_inner_t0marglst
+overload nameof_inner with nameof_inner_s0qualst
+overload nameof_inner with nameof_inner_s0unilst
+overload nameof_inner with nameof_inner_s0explst
+overload nameof_inner with nameof_inner_s0expopt
+overload nameof_inner with nameof_inner_d0atconlst
+overload nameof_inner with nameof_inner_d0atypelst
+overload nameof_inner with nameof_inner_t0intopt
+
+(* ****** ****** *)
+
+
 fun nameof_t0int_node : nameof_type(t0int_node)
 overload nameof with nameof_t0int_node
 

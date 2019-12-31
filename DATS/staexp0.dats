@@ -48,6 +48,29 @@ implement nameof_t0intopt(x) = "t0intopt"
 
 //
 
+implement nameof_inner_labs0explst(x) = "labs0exp"
+implement nameof_inner_d0tsortlst(x) = "d0tsort"
+implement nameof_inner_d0atypelst(x) = "d0atype"
+implement nameof_inner_s0arglst(x) = "s0arg"
+implement nameof_inner_s0explst(x) = "s0exp"
+implement nameof_inner_s0qualst(x) = "s0qua"
+implement nameof_inner_s0unilst(x) = "s0uni"
+implement nameof_inner_s0marglst(x) = "s0marg"
+implement nameof_inner_t0arglst(x) = "t0arg"
+implement nameof_inner_s0rtconlst(x) = "s0rtcon"
+implement nameof_inner_d0atconlst(x) = "d0atcon"
+implement nameof_inner_sort0opt(x) = "sort0"
+implement nameof_inner_g0explst(x) = "g0exp"
+implement nameof_inner_g0marglst(x) = "g0marg"
+implement nameof_inner_t0marglst(x) = "t0marg"
+implement nameof_inner_sort0lst(x) = "s0rt0"
+implement nameof_inner_i0dntlst(x) = "i0dnt"
+implement nameof_inner_i0dntopt(x) = "i0dnt"
+implement nameof_inner_s0expopt(x) = "s0exp"
+implement nameof_inner_t0intopt(x) = "t0int"
+
+//
+
 implement nameof_t0int(x0) = "t0int"
 implement nameof_t0chr(x0) = "t0chr"
 implement nameof_t0flt(x0) = "t0flt"
@@ -55,6 +78,7 @@ implement nameof_t0str(x0) = "t0str"
 implement nameof_i0dnt(x0) = "i0dnt"
 implement nameof_l0abl(l0) = "l0abl"
 implement nameof_s0ymb(x0) = "s0ymb"
+implement nameof_g0exp(x0) = "g0exp"
 implement nameof_sq0eid(x0) = "sq0eid"
 implement nameof_dq0eid(x0) = "dq0eid"
 implement nameof_g0marg(x0) = "g0marg"
@@ -179,6 +203,21 @@ nameof_tag_dq0eid(x0) =
 case+ x0 of
 | DQ0EIDnone _ => "DQ0EIDnone"
 | DQ0EIDsome _ => "DQ0EIDsome"
+)
+
+
+implement
+nameof_g0exp_node(x0) = "g0exp_node"
+
+implement
+nameof_tag_g0exp_node(x0) =
+(
+case+ x0 of
+| G0Eid _ => "G0Eid"
+| G0Eint _ => "G0Eint"
+| G0Eapps _ => "G0Eapps"
+| G0Elist _ => "G0Elist"
+| G0Enone _ => "G0Enone"
 )
 
 

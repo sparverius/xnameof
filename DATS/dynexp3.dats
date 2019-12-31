@@ -81,6 +81,9 @@ case+ x0 of
 | D3Pnone2 _ => "D3Pnone2"
 //
 | D3Psapp _ => "D3Psapp"
+//
+| D3Pflat _ => "D3Pflat"
+| D3Pfree _ => "D3Pfree"
 )
 
 
@@ -149,6 +152,8 @@ case+ x0 of
 | D3Enone0 _ => "D3Enone0"
 | D3Enone1 _ => "D3Enone1"
 | D3Enone2 _ => "D3Enone2"
+//
+| D3Epcon (_,_) => "D3Epcon"
 )
 
 

@@ -9,14 +9,16 @@
 #staload "./../SATS/lexing.sats"
 
 
-implement{} nameof_tokenopt(x) = "tokenopt"
+implement nameof_tokenopt(x) = "tokenopt"
 
-implement{} nameof_tokenlst(x) = "tokenlst"
+implement nameof_tokenlst(x) = "tokenlst"
 
 implement nameof_token(tok) = "token"
 
 implement nameof_tnode(tnd) = "tnode"
 
+implement nameof_inner_tokenopt(x) = "token"
+implement nameof_inner_tokenlst(x) = "token"
 
 implement
 nameof_tag_tnode(tnd) =

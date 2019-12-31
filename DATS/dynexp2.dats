@@ -120,6 +120,9 @@ case x0 of
 | D2Panno _ => "D2Panno"
 | D2Pnone0 _ => "D2Pnone0"
 | D2Pnone1 _ => "D2Pnone1"
+//
+| D2Pflat _ => "D2Pflat"
+| D2Pfree _ => "D2Pfree"
 )
 
 

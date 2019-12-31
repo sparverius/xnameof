@@ -22,3 +22,13 @@
 
 
 implement nameof_label(l0) = "label"
+
+implement nameof_tag_label(l0) =
+(
+  case+ label_get_int(l0) of
+  | ~None_vt() => (
+      case- label_get_sym(l0) of
+      | ~Some_vt(sym) => "LABsym"
+    )
+  | ~Some_vt(int) => "LABint"
+)

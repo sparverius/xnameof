@@ -5,21 +5,20 @@
 
 fun{a:type} nameof_dl0abeled : nameof_type(dl0abeled(a))
 
-fun(*{}*) nameof_labd0patlst : nameof_type(labd0patlst)
+fun nameof_labd0pat : nameof_type(labd0pat)
+fun nameof_labd0patlst : nameof_type(labd0patlst)
+overload nameof with nameof_labd0pat
 overload nameof with nameof_labd0patlst
 
-fun(*{}*) nameof_labd0explst : nameof_type(labd0explst)
+fun nameof_labd0exp : nameof_type(labd0exp)
+fun nameof_labd0explst : nameof_type(labd0explst)
+overload nameof with nameof_labd0exp
 overload nameof with nameof_labd0explst
-
-fun nameof_a0typlstopt : nameof_type(a0typlstopt)
-overload nameof with nameof_a0typlstopt
-
 
 fun nameof_q0arg : nameof_type(q0arg)
 fun nameof_q0arglst : nameof_type(q0arglst)
 overload nameof with nameof_q0arg
 overload nameof with nameof_q0arglst
-
 
 fun nameof_sq0arg : nameof_type(sq0arg)
 fun nameof_sq0arglst : nameof_type(sq0arglst)
@@ -38,8 +37,12 @@ overload nameof with nameof_ti0arglst
 
 fun nameof_a0typ : nameof_type(a0typ)
 fun nameof_a0typlst : nameof_type(a0typlst)
+fun nameof_a0typopt : nameof_type(a0typopt)
+fun nameof_a0typlstopt : nameof_type(a0typlstopt)
 overload nameof with nameof_a0typ
 overload nameof with nameof_a0typlst
+overload nameof with nameof_a0typopt
+overload nameof with nameof_a0typlstopt
 
 
 fun nameof_d0arg : nameof_type(d0arg)
@@ -160,6 +163,28 @@ overload nameof with nameof_d0macdef
 fun nameof_wd0eclseq : nameof_type(wd0eclseq)
 overload nameof with nameof_wd0eclseq
 
+
+fun nameof_inner_labd0patlst : nameof_type(labd0patlst)
+fun nameof_inner_labd0explst : nameof_type(labd0explst)
+fun nameof_inner_q0arglst : nameof_type(q0arglst)
+fun nameof_inner_sq0arglst : nameof_type(sq0arglst)
+fun nameof_inner_tq0arglst : nameof_type(tq0arglst)
+fun nameof_inner_ti0arglst : nameof_type(ti0arglst)
+fun nameof_inner_a0typlst : nameof_type(a0typlst)
+fun nameof_inner_a0typopt : nameof_type(a0typopt)
+fun nameof_inner_a0typlstopt : nameof_type(a0typlstopt)
+fun nameof_inner_d0arglst : nameof_type(d0arglst)
+fun nameof_inner_f0arglst : nameof_type(f0arglst)
+fun nameof_inner_d0patlst : nameof_type(d0patlst)
+fun nameof_inner_d0claulst : nameof_type(d0claulst)
+fun nameof_inner_d0expopt : nameof_type(d0expopt)
+fun nameof_inner_d0explst : nameof_type(d0explst)
+fun nameof_inner_d0gualst : nameof_type(d0gualst)
+fun nameof_inner_v0aldeclist : nameof_type(v0aldeclist)
+fun nameof_inner_v0ardeclist : nameof_type(v0ardeclist)
+fun nameof_inner_f0undeclist : nameof_type(f0undeclist)
+fun nameof_inner_d0cstdeclist : nameof_type(d0cstdeclist)
+fun nameof_inner_d0eclist : nameof_type(d0eclist)
 
 
 
