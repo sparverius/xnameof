@@ -16,3 +16,6 @@
 implement nameof_filpathopt(x) = "filpathopt"
 
 implement nameof_filpath(x) = "filpath"
+
+implement nameof_val<filpathopt> = nameof_filpathopt
+implement nameof_val<filpath> = nameof_filpath
