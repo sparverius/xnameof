@@ -60,6 +60,9 @@ implement nameof_s2xtv(x0) = "s2xtv"
 (* ****** ****** *)
 
 
+implement nameof_s2exp_node(s2e0) = "s2exp_node"
+
+
 implement
 nameof_tag_sort2(s2t0) =
 (
@@ -115,9 +118,6 @@ case+ knd of
 | TYRECflt2 _ => "TYRECflt2"
 )
 
-
-implement
-nameof_s2exp_node(s2e0) = "s2exp_node"
 
 implement
 nameof_tag_s2exp_node(s2e0) =
@@ -194,3 +194,32 @@ case+ x0 of
 | EFFS2EXPsome _ => "EFFS2EXPsome"
 *)
 )
+
+//
+
+implement nameof_val<sort2lst> = nameof_sort2lst
+implement nameof_val<s2explst> = nameof_s2explst
+implement nameof_val<s2varlst> = nameof_s2varlst
+implement nameof_val<s2cstlst> = nameof_s2cstlst
+implement nameof_val<s2cstopt> = nameof_s2cstopt
+implement nameof_val<s2expopt> = nameof_s2expopt
+implement nameof_val<labs2explst> = nameof_labs2explst
+
+implement nameof_val<sort2> = nameof_sort2
+implement nameof_val<t2bas> = nameof_t2bas
+implement nameof_val<t2abs> = nameof_t2abs
+implement nameof_val<t2dat> = nameof_t2dat
+implement nameof_val<s2cst> = nameof_s2cst
+implement nameof_val<s2var> = nameof_s2var
+implement nameof_val<s2txt> = nameof_s2txt
+implement nameof_val<tyrec> = nameof_tyrec
+implement nameof_val<s2exp> = nameof_s2exp
+implement nameof_val<labs2exp> = nameof_labs2exp
+implement nameof_val<s2itm> = nameof_s2itm
+implement nameof_val<abstdf2> = nameof_abstdf2
+implement nameof_val<effs2expopt> = nameof_effs2expopt
+implement nameof_val<fmodenv> = nameof_fmodenv
+implement nameof_val<fmodenvopt> = nameof_fmodenvopt
+implement nameof_val<s2xtv> = nameof_s2xtv
+
+implement nameof_val<s2exp_node> = nameof_s2exp_node

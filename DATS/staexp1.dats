@@ -69,8 +69,22 @@ implement nameof_d1atcon(x0) = "d1atcon"
 (* ****** ****** *)
 
 
-implement
-nameof_g1exp_node(x0) = "g1exp_node"
+implement nameof_g1exp_node(x0) = "g1exp_node"
+implement nameof_g1marg_node(x0) = "g1marg_node"
+implement nameof_sort1_node(x0) = "sort1_node"
+implement nameof_s1rtcon_node(x0) = "s1rtcon_node"
+implement nameof_d1tsort_node(x0) = "d1tsort_node"
+implement nameof_s1rtdef_node(x0) = "s1rtdef_node"
+implement nameof_s1arg_node(x0) = "s1arg_node"
+implement nameof_s1marg_node(x0) = "s1marg_node"
+implement nameof_t1arg_node(x0) = "t1arg_node"
+implement nameof_t1marg_node(x0) = "t1marg_node"
+implement nameof_s1qua_node(x0) = "s1qua_node"
+implement nameof_s1uni_node(x0) = "s1uni_node"
+implement nameof_s1exp_node(x0) = "s1exp_node"
+implement nameof_d1atype_node(x0) = "d1atype_node"
+implement nameof_d1atcon_node(x0) = "d1atcon_node"
+
 
 implement
 nameof_tag_g1exp_node(x0) =
@@ -87,9 +101,6 @@ case+ x0 of
 
 
 implement
-nameof_g1marg_node(x0) = "g1marg_node"
-
-implement
 nameof_tag_g1marg_node(x0) =
 (
 case+ x0 of
@@ -97,10 +108,6 @@ case+ x0 of
 | G1MARGdarg _ => "G1MARGdarg"
 )
 
-
-
-implement
-nameof_sort1_node(x0) = "sort1_node"
 
 implement
 nameof_tag_sort1_node(x0) =
@@ -124,18 +131,12 @@ case+ x0 of
 
 
 implement
-nameof_s1rtcon_node(x0) = "s1rtcon_node"
-
-implement
 nameof_tag_s1rtcon_node(x0) =
 (
 case+ x0 of
 | S1RTCON _ => "S1RTCON"
 )
 
-
-implement
-nameof_d1tsort_node(x0) = "d1tsort_node"
 
 implement
 nameof_tag_d1tsort_node(x0) =
@@ -146,9 +147,6 @@ case+ x0 of
 
 
 implement
-nameof_s1rtdef_node(x0) = "s1rtdef_node"
-
-implement
 nameof_tag_s1rtdef_node(x0) =
 (
 case+ x0 of
@@ -156,8 +154,6 @@ case+ x0 of
 | S1RTDEFsbst _ => "S1RTDEFsbst"
 )
 
-implement
-nameof_s1arg_node(x0) = "s1arg_node"
 
 implement
 nameof_tag_s1arg_node(x0) =
@@ -169,9 +165,6 @@ case+ x0 of
 | S1ARGsome _ => "S1ARGsome"
 )
 
-
-implement
-nameof_s1marg_node(x0) = "s1marg_node"
 
 implement
 nameof_tag_s1marg_node(x0) =
@@ -186,9 +179,6 @@ case+ x0 of
 
 
 implement
-nameof_t1arg_node(x0) = "t1arg_node"
-
-implement
 nameof_tag_t1arg_node(x0) =
 (
 case+ x0 of
@@ -198,9 +188,6 @@ case+ x0 of
 | T1ARGsome _ => "T1ARGsome"
 )
 
-
-implement
-nameof_t1marg_node(x0) = "t1marg_node"
 
 implement
 nameof_tag_t1marg_node(x0) =
@@ -214,9 +201,6 @@ case+ x0 of
 
 
 implement
-nameof_s1qua_node(x0) = "s1qua_node"
-
-implement
 nameof_tag_s1qua_node(x0) =
 (
 case+ x0 of
@@ -226,18 +210,12 @@ case+ x0 of
 
 
 implement
-nameof_s1uni_node(x0) = "s1uni_node"
-
-implement
 nameof_tag_s1uni_node(x0) =
 (
 case+ x0 of
 | S1UNIsome _ => "S1UNIsome"
 )
 
-
-implement
-nameof_s1exp_node(x0) = "s1exp_node"
 
 implement
 nameof_tag_s1exp_node(x0) =
@@ -285,9 +263,6 @@ case+ x0 of
 
 
 implement
-nameof_d1atype_node(x0) = "d1atype_node"
-
-implement
 nameof_tag_d1atype_node(x0) =
 (
 case+ x0 of
@@ -296,11 +271,62 @@ case+ x0 of
 
 
 implement
-nameof_d1atcon_node(x0) = "d1atcon_node"
-
-implement
 nameof_tag_d1atcon_node(x0) =
 (
 case+ x0 of
 | D1ATCON _ => "D1ATCON"
 )
+
+//
+
+implement nameof_val<g1marglst> = nameof_g1marglst
+implement nameof_val<s1arglst> = nameof_s1arglst
+implement nameof_val<s1explst> = nameof_s1explst
+implement nameof_val<s1qualst> = nameof_s1qualst
+implement nameof_val<s1unilst> = nameof_s1unilst
+implement nameof_val<s1marglst> = nameof_s1marglst
+implement nameof_val<t1arglst> = nameof_t1arglst
+implement nameof_val<s1rtconlst> = nameof_s1rtconlst
+implement nameof_val<d1atconlst> = nameof_d1atconlst
+implement nameof_val<sort1opt> = nameof_sort1opt
+implement nameof_val<g1explst> = nameof_g1explst
+implement nameof_val<g1expopt> = nameof_g1expopt
+implement nameof_val<d1tsortlst> = nameof_d1tsortlst
+implement nameof_val<d1atypelst> = nameof_d1atypelst
+implement nameof_val<t1marglst> = nameof_t1marglst
+implement nameof_val<sort1lst> = nameof_sort1lst
+implement nameof_val<s1expopt> = nameof_s1expopt
+implement nameof_val<labs1explst> = nameof_labs1explst<>
+
+implement nameof_val<g1exp> = nameof_g1exp
+implement nameof_val<g1marg> = nameof_g1marg
+implement nameof_val<sort1> = nameof_sort1
+implement nameof_val<s1rtcon> = nameof_s1rtcon
+implement nameof_val<d1tsort> = nameof_d1tsort
+implement nameof_val<s1rtdef> = nameof_s1rtdef
+implement nameof_val<s1arg> = nameof_s1arg
+implement nameof_val<s1marg> = nameof_s1marg
+implement nameof_val<t1arg> = nameof_t1arg
+implement nameof_val<t1marg> = nameof_t1marg
+implement nameof_val<s1qua> = nameof_s1qua
+implement nameof_val<s1uni> = nameof_s1uni
+implement nameof_val<s1exp> = nameof_s1exp
+implement nameof_val<effs1expopt> = nameof_effs1expopt
+implement nameof_val<d1atype> = nameof_d1atype
+implement nameof_val<d1atcon> = nameof_d1atcon
+
+implement nameof_val<g1exp_node> = nameof_g1exp_node
+implement nameof_val<g1marg_node> = nameof_g1marg_node
+implement nameof_val<sort1_node> = nameof_sort1_node
+implement nameof_val<s1rtcon_node> = nameof_s1rtcon_node
+implement nameof_val<d1tsort_node> = nameof_d1tsort_node
+implement nameof_val<s1rtdef_node> = nameof_s1rtdef_node
+implement nameof_val<s1arg_node> = nameof_s1arg_node
+implement nameof_val<s1marg_node> = nameof_s1marg_node
+implement nameof_val<t1arg_node> = nameof_t1arg_node
+implement nameof_val<t1marg_node> = nameof_t1marg_node
+implement nameof_val<s1qua_node> = nameof_s1qua_node
+implement nameof_val<s1uni_node> = nameof_s1uni_node
+implement nameof_val<s1exp_node> = nameof_s1exp_node
+implement nameof_val<d1atype_node> = nameof_d1atype_node
+implement nameof_val<d1atcon_node> = nameof_d1atcon_node
