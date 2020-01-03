@@ -54,55 +54,45 @@ implement nameof_a1typlstopt(x) = "a1typlstopt"
 
 //
 
-implement
-nameof_q1arg(x0) = "q1arg"
-implement
-nameof_a1typ(x0) = "a1typ"
-implement
-nameof_d1arg(x0) = "d1arg"
-implement
-nameof_f1arg(x0) = "f1arg"
-implement
-nameof_sq1arg(x0) = "sq1arg"
-implement
-nameof_ti1arg(x0) = "ti1arg"
-implement
-nameof_tq1arg(x0) = "tq1arg"
-implement
-nameof_d1exp(x0) = "d1exp"
-implement
-nameof_d1ecl(x0) = "d1ecl"
-implement
-nameof_d1pat (x0) = "d1pat"
-implement
-nameof_f1unarrow(x0) = "f1unarrow"
-implement
-nameof_teqd1expopt(x0) = "teqd1expopt"
-implement
-nameof_wths1expopt(x0) = "wths1expopt"
-implement
-nameof_d1gua(x0) = "d1gua"
-implement
-nameof_d1clau(x0) = "d1clau"
-implement
-nameof_d1gpat(x0) = "d1gpat"
-implement
-nameof_abstdf1(x0) = "abstdf1"
-implement
-nameof_wd1eclseq(x0) = "wd1eclseq"
-implement
-nameof_v1aldecl(x0) = "v1aldecl"
-implement
-nameof_v1ardecl(x0) = "v1ardecl"
-implement
-nameof_f1undecl(x0) = "f1undecl"
-implement
-nameof_d1cstdecl(x0) = "d1cstdecl"
+implement nameof_q1arg(x0) = "q1arg"
+implement nameof_a1typ(x0) = "a1typ"
+implement nameof_d1arg(x0) = "d1arg"
+implement nameof_f1arg(x0) = "f1arg"
+implement nameof_sq1arg(x0) = "sq1arg"
+implement nameof_ti1arg(x0) = "ti1arg"
+implement nameof_tq1arg(x0) = "tq1arg"
+implement nameof_d1exp(x0) = "d1exp"
+implement nameof_d1ecl(x0) = "d1ecl"
+implement nameof_d1pat (x0) = "d1pat"
+implement nameof_f1unarrow(x0) = "f1unarrow"
+implement nameof_teqd1expopt(x0) = "teqd1expopt"
+implement nameof_wths1expopt(x0) = "wths1expopt"
+implement nameof_d1gua(x0) = "d1gua"
+implement nameof_d1clau(x0) = "d1clau"
+implement nameof_d1gpat(x0) = "d1gpat"
+implement nameof_abstdf1(x0) = "abstdf1"
+implement nameof_wd1eclseq(x0) = "wd1eclseq"
+implement nameof_v1aldecl(x0) = "v1aldecl"
+implement nameof_v1ardecl(x0) = "v1ardecl"
+implement nameof_f1undecl(x0) = "f1undecl"
+implement nameof_d1cstdecl(x0) = "d1cstdecl"
 
 //
 
-implement
-nameof_q1arg_node(x0) = "q1arg_node"
+implement nameof_q1arg_node(x0) = "q1arg_node"
+implement nameof_a1typ_node(x0) = "a1typ_node"
+implement nameof_d1arg_node(x0) = "d1arg_node"
+implement nameof_f1arg_node(x0) = "f1arg_node"
+implement nameof_sq1arg_node(x0) = "sq1arg_node"
+implement nameof_ti1arg_node(x0) = "ti1arg_node"
+implement nameof_tq1arg_node(x0) = "tq1arg_node"
+implement nameof_d1exp_node(x0) = "d1exp_node"
+implement nameof_d1ecl_node(x0) = "d1ecl_node"
+implement nameof_d1pat_node(x0) = "d1pat_node"
+implement nameof_d1gua_node(x0) = "d1gua_node"
+implement nameof_d1clau_node(x0) = "d1clau_node"
+implement nameof_d1gpat_node(x0) = "d1gpat_node"
+
 
 implement
 nameof_tag_q1arg_node(x0) =
@@ -116,18 +106,12 @@ case+ x0 of
 
 
 implement
-nameof_a1typ_node(x0) = "a1typ_node"
-
-implement
 nameof_tag_a1typ_node(x0) =
 (
 case+ x0 of
 | A1TYPsome _ => "A1TYPsome"
 )
 
-
-implement
-nameof_d1arg_node(x0) = "d1arg_node"
 
 implement
 nameof_tag_d1arg_node(x0) =
@@ -138,9 +122,6 @@ case+ x0 of
 | D1ARGsome_dyn2 _ => "D1ARGsome_dyn2"
 )
 
-
-implement
-nameof_f1arg_node(x0) = "f1arg_node"
 
 implement
 nameof_tag_f1arg_node(x0) =
@@ -156,9 +137,6 @@ case+ x0 of
 
 
 implement
-nameof_sq1arg_node(x0) = "sq1arg_node"
-
-implement
 nameof_tag_sq1arg_node(x0) =
 (
 case+ x0 of
@@ -166,9 +144,6 @@ case+ x0 of
 | SQ1ARGsome _ => "SQ1ARGsome"
 )
 
-
-implement
-nameof_ti1arg_node(x0) = "ti1arg_node"
 
 implement
 nameof_tag_ti1arg_node(x0) =
@@ -180,9 +155,6 @@ case+ x0 of
 
 
 implement
-nameof_tq1arg_node(x0) = "tq1arg_node"
-
-implement
 nameof_tag_tq1arg_node(x0) =
 (
 case+ x0 of
@@ -190,9 +162,6 @@ case+ x0 of
 | TQ1ARGsome _ => "TQ1ARGsome"
 )
 
-
-implement
-nameof_d1exp_node(x0) = "d1exp_node"
 
 implement
 nameof_tag_d1exp_node(x0) =
@@ -232,9 +201,6 @@ case+ x0 of
 
 
 implement
-nameof_d1ecl_node(x0) = "d1ecl_node"
-
-implement
 nameof_tag_d1ecl_node(x0) =
 (
 case+ x0 of
@@ -264,9 +230,6 @@ case+ x0 of
 | D1Ctokerr _ => "D1Ctokerr"
 )
 
-
-implement
-nameof_d1pat_node(x0) = "d1pat _node"
 
 implement
 nameof_tag_d1pat_node(x0) =
@@ -322,9 +285,6 @@ case+ x0 of
 
 
 implement
-nameof_d1gua_node(x0) = "d1gua_node"
-
-implement
 nameof_tag_d1gua_node(x0) =
 (
 case+ x0 of
@@ -334,9 +294,6 @@ case+ x0 of
 
 
 implement
-nameof_d1clau_node(x0) = "d1clau_node"
-
-implement
 nameof_tag_d1clau_node(x0) =
 (
 case+ x0 of
@@ -344,9 +301,6 @@ case+ x0 of
 | D1CLAUclau _ => "D1CLAUclau"
 )
 
-
-implement
-nameof_d1gpat_node(x0) = "d1gpat_node"
 
 implement
 nameof_tag_d1gpat_node(x0) =
@@ -407,3 +361,64 @@ nameof_tag_d1cstdecl(x0) = let
 in
   "D1CSTDECL"
 end
+
+//
+
+implement nameof_val<q1arglst> = nameof_q1arglst
+implement nameof_val<sq1arglst> = nameof_sq1arglst
+implement nameof_val<tq1arglst> = nameof_tq1arglst
+implement nameof_val<ti1arglst> = nameof_ti1arglst
+implement nameof_val<a1typlst> = nameof_a1typlst
+implement nameof_val<d1arglst> = nameof_d1arglst
+implement nameof_val<f1arglst> = nameof_f1arglst
+implement nameof_val<d1patlst> = nameof_d1patlst
+implement nameof_val<d1gualst> = nameof_d1gualst
+implement nameof_val<d1claulst> = nameof_d1claulst
+implement nameof_val<d1explst> = nameof_d1explst
+implement nameof_val<d1expopt> = nameof_d1expopt
+implement nameof_val<v1aldeclist> = nameof_v1aldeclist
+implement nameof_val<v1ardeclist> = nameof_v1ardeclist
+implement nameof_val<f1undeclist> = nameof_f1undeclist
+implement nameof_val<d1cstdeclist> = nameof_d1cstdeclist
+implement nameof_val<d1eclist> = nameof_d1eclist
+implement nameof_val<d1eclistopt> = nameof_d1eclistopt
+implement nameof_val<labd1patlst> = nameof_labd1patlst<>
+implement nameof_val<labd1explst> = nameof_labd1explst<>
+implement nameof_val<a1typlstopt> = nameof_a1typlstopt
+
+implement nameof_val<q1arg> = nameof_q1arg
+implement nameof_val<a1typ> = nameof_a1typ
+implement nameof_val<d1arg> = nameof_d1arg
+implement nameof_val<f1arg> = nameof_f1arg
+implement nameof_val<sq1arg> = nameof_sq1arg
+implement nameof_val<ti1arg> = nameof_ti1arg
+implement nameof_val<tq1arg> = nameof_tq1arg
+implement nameof_val<d1exp> = nameof_d1exp
+implement nameof_val<d1ecl> = nameof_d1ecl
+implement nameof_val<d1pat > = nameof_d1pat
+implement nameof_val<f1unarrow> = nameof_f1unarrow
+implement nameof_val<teqd1expopt> = nameof_teqd1expopt
+implement nameof_val<wths1expopt> = nameof_wths1expopt
+implement nameof_val<d1gua> = nameof_d1gua
+implement nameof_val<d1clau> = nameof_d1clau
+implement nameof_val<d1gpat> = nameof_d1gpat
+implement nameof_val<abstdf1> = nameof_abstdf1
+implement nameof_val<wd1eclseq> = nameof_wd1eclseq
+implement nameof_val<v1aldecl> = nameof_v1aldecl
+implement nameof_val<v1ardecl> = nameof_v1ardecl
+implement nameof_val<f1undecl> = nameof_f1undecl
+implement nameof_val<d1cstdecl> = nameof_d1cstdecl
+
+implement nameof_val<q1arg_node> = nameof_q1arg_node
+implement nameof_val<a1typ_node> = nameof_a1typ_node
+implement nameof_val<d1arg_node> = nameof_d1arg_node
+implement nameof_val<f1arg_node> = nameof_f1arg_node
+implement nameof_val<sq1arg_node> = nameof_sq1arg_node
+implement nameof_val<ti1arg_node> = nameof_ti1arg_node
+implement nameof_val<tq1arg_node> = nameof_tq1arg_node
+implement nameof_val<d1exp_node> = nameof_d1exp_node
+implement nameof_val<d1ecl_node> = nameof_d1ecl_node
+implement nameof_val<d1pat_node> = nameof_d1pat_node
+implement nameof_val<d1gua_node> = nameof_d1gua_node
+implement nameof_val<d1clau_node> = nameof_d1clau_node
+implement nameof_val<d1gpat_node> = nameof_d1gpat_node
