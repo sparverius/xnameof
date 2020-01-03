@@ -27,35 +27,29 @@ implement nameof_d3patlst(x) = "d3patlst"
 
 //
 
-implement
-nameof_d3pat(x0) = "d3pat"
-implement
-nameof_f3arg(x0) = "f3arg"
-implement
-nameof_d3exp(x0) = "d3exp"
-implement
-nameof_d3gua(x0) = "d3gua"
-implement
-nameof_d3clau(x0) = "d3clau"
-implement
-nameof_d3gpat(x0) = "d3gpat"
-implement
-nameof_ti3arg(x0) = "ti3arg"
-implement
-nameof_d3ecl(x0) = "d3ecl"
-implement
-nameof_t2pcast(x0) = "t2pcast"
-implement
-nameof_v3aldecl(x0) = "v3aldecl"
-implement
-nameof_v3ardecl(x0) = "v3ardecl"
-implement
-nameof_f3undecl(x0) = "f3undecl"
+implement nameof_d3pat(x0) = "d3pat"
+implement nameof_f3arg(x0) = "f3arg"
+implement nameof_d3exp(x0) = "d3exp"
+implement nameof_d3gua(x0) = "d3gua"
+implement nameof_d3clau(x0) = "d3clau"
+implement nameof_d3gpat(x0) = "d3gpat"
+implement nameof_ti3arg(x0) = "ti3arg"
+implement nameof_d3ecl(x0) = "d3ecl"
+implement nameof_t2pcast(x0) = "t2pcast"
+implement nameof_v3aldecl(x0) = "v3aldecl"
+implement nameof_v3ardecl(x0) = "v3ardecl"
+implement nameof_f3undecl(x0) = "f3undecl"
 
 //
 
-implement
-nameof_d3pat_node(x0) = "d3pat_node"
+implement nameof_d3pat_node(x0) = "d3pat_node"
+implement nameof_f3arg_node(x0) = "f3arg_node"
+implement nameof_d3exp_node(x0) = "d3exp_node"
+implement nameof_d3gua_node(x0) = "d3gua_node"
+implement nameof_d3clau_node(x0) = "d3clau_node"
+implement nameof_d3gpat_node(x0) = "d3gpat_node"
+implement nameof_d3ecl_node(x0) = "d3ecl_node"
+
 
 implement
 nameof_tag_d3pat_node(x0) =
@@ -88,9 +82,6 @@ case+ x0 of
 
 
 implement
-nameof_f3arg_node(x0) = "f3arg_node"
-
-implement
 nameof_tag_f3arg_node(x0) =
 (
 case+ x0 of
@@ -101,9 +92,6 @@ case+ x0 of
 | F3ARGsome_sta _ => "F3ARGsome_sta"
 )
 
-
-implement
-nameof_d3exp_node(x0) = "d3exp_node"
 
 implement
 nameof_tag_d3exp_node(x0) =
@@ -158,9 +146,6 @@ case+ x0 of
 
 
 implement
-nameof_d3gua_node(x0) = "d3gua_node"
-
-implement
 nameof_tag_d3gua_node(x0) =
 (
 case+ x0 of
@@ -170,9 +155,6 @@ case+ x0 of
 
 
 implement
-nameof_d3clau_node(x0) = "d3clau_node"
-
-implement
 nameof_tag_d3clau_node(x0) =
 (
 case+ x0 of
@@ -180,9 +162,6 @@ case+ x0 of
 | D3CLAUexp _ => "D3CLAUexp"
 )
 
-
-implement
-nameof_d3gpat_node(x0) = "d3gpat_node"
 
 implement
 nameof_tag_d3gpat_node(x0) =
@@ -201,9 +180,6 @@ case+ x0 of
 | TI3ARGsome _ => "TI3ARGsome"
 )
 
-
-implement
-nameof_d3ecl_node(x0) = "d3ecl_node"
 
 implement
 nameof_tag_d3ecl_node(x0) =
@@ -256,3 +232,40 @@ nameof_tag_f3undecl(x0) = let
 in
   "F3UNDECL"
 end
+
+
+//
+
+implement nameof_val<d3claulst> = nameof_d3claulst
+implement nameof_val<f3arglst> = nameof_f3arglst
+implement nameof_val<d3gualst> = nameof_d3gualst
+implement nameof_val<v3aldeclist> = nameof_v3aldeclist
+implement nameof_val<v3ardeclist> = nameof_v3ardeclist
+implement nameof_val<f3undeclist> = nameof_f3undeclist
+implement nameof_val<d3eclist> = nameof_d3eclist
+implement nameof_val<d3eclistopt> = nameof_d3eclistopt
+implement nameof_val<d3explst> = nameof_d3explst
+implement nameof_val<d3explstopt> = nameof_d3explstopt
+implement nameof_val<d3expopt> = nameof_d3expopt
+implement nameof_val<d3patlst> = nameof_d3patlst
+
+implement nameof_val<d3pat> = nameof_d3pat
+implement nameof_val<f3arg> = nameof_f3arg
+implement nameof_val<d3exp> = nameof_d3exp
+implement nameof_val<d3gua> = nameof_d3gua
+implement nameof_val<d3clau> = nameof_d3clau
+implement nameof_val<d3gpat> = nameof_d3gpat
+implement nameof_val<ti3arg> = nameof_ti3arg
+implement nameof_val<d3ecl> = nameof_d3ecl
+implement nameof_val<t2pcast> = nameof_t2pcast
+implement nameof_val<v3aldecl> = nameof_v3aldecl
+implement nameof_val<v3ardecl> = nameof_v3ardecl
+implement nameof_val<f3undecl> = nameof_f3undecl
+
+implement nameof_val<d3pat_node> = nameof_d3pat_node
+implement nameof_val<f3arg_node> = nameof_f3arg_node
+implement nameof_val<d3exp_node> = nameof_d3exp_node
+implement nameof_val<d3gua_node> = nameof_d3gua_node
+implement nameof_val<d3clau_node> = nameof_d3clau_node
+implement nameof_val<d3gpat_node> = nameof_d3gpat_node
+implement nameof_val<d3ecl_node> = nameof_d3ecl_node
