@@ -117,8 +117,20 @@ implement nameof_d0cstdecl(x0) = "d0cstdecl"
 (* ****** ****** *)
 
 
-implement
-nameof_q0arg_node(x0) = "q0arg_node"
+implement nameof_q0arg_node(x0) = "q0arg_node"
+implement nameof_a0typ_node(x0) = "a0typ_node"
+implement nameof_d0arg_node(x0) = "d0arg_node"
+implement nameof_f0arg_node(x0) = "f0arg_node"
+implement nameof_sq0arg_node(x0) = "sq0arg_node"
+implement nameof_tq0arg_node(x0) = "tq0arg_node"
+implement nameof_ti0arg_node(x0) = "ti0arg_node"
+implement nameof_d0pat_node(x0) = "d0pat_node"
+implement nameof_d0clau_node(x0) = "d0clau_node"
+implement nameof_d0gpat_node(x0) = "d0gpat_node"
+implement nameof_d0gua_node(x0) = "d0gua_node"
+implement nameof_d0exp_node(x0) = "d0exp_node"
+implement nameof_d0ecl_node(x0) = "d0ecl_node"
+
 
 implement
 nameof_tag_q0arg_node(x0) =
@@ -132,9 +144,6 @@ case+ x0 of
 
 
 implement
-nameof_a0typ_node(x0) = "a0typ_node"
-
-implement
 nameof_tag_a0typ_node(x0) =
 (
 case+ x0 of
@@ -144,8 +153,6 @@ case+ x0 of
 | A0TYPsome _ => "A0TYPsome"
 )
 
-implement
-nameof_d0arg_node(x0) = "d0arg_node"
 
 implement
 nameof_tag_d0arg_node(x0) =
@@ -159,9 +166,6 @@ case+ x0 of
 
 
 implement
-nameof_f0arg_node(x0) = "f0arg_node"
-
-implement
 nameof_tag_f0arg_node(x0) =
 (
 case+ x0 of
@@ -173,9 +177,6 @@ case+ x0 of
 
 
 implement
-nameof_sq0arg_node(x0) = "sq0arg_node"
-
-implement
 nameof_tag_sq0arg_node(x0) =
 (
 case+ x0 of
@@ -183,8 +184,6 @@ case+ x0 of
 | SQ0ARGsome _ => "SQ0ARGsome"
 )
 
-implement
-nameof_tq0arg_node(x0) = "tq0arg_node"
 
 implement
 nameof_tag_tq0arg_node(x0) =
@@ -194,9 +193,6 @@ case+ x0 of
 | TQ0ARGsome _ => "TQ0ARGsome"
 )
 
-
-implement
-nameof_ti0arg_node(x0) = "ti0arg_node"
 
 implement
 nameof_tag_ti0arg_node(x0) =
@@ -213,9 +209,6 @@ where
   val+DL0ABELED(l0, t0, x1) = x0
 end
 
-
-implement
-nameof_d0pat_node(x0) = "d0pat_node"
 
 implement
 nameof_tag_d0pat_node(x0) =
@@ -256,9 +249,6 @@ case+ x0 of
 
 
 implement
-nameof_d0clau_node(x0) = "d0clau_node"
-
-implement
 nameof_tag_d0clau_node(x0) =
 (
 case+ x0 of
@@ -266,9 +256,6 @@ case+ x0 of
 | D0CLAUclau _ => "D0CLAUclau"
 )
 
-
-implement
-nameof_d0gpat_node(x0) = "d0gpat_node"
 
 implement
 nameof_tag_d0gpat_node(x0) =
@@ -280,9 +267,6 @@ case+ x0 of
 
 
 implement
-nameof_d0gua_node(x0) = "d0gua_node"
-
-implement
 nameof_tag_d0gua_node(x0) =
 (
 case+ x0 of
@@ -290,9 +274,6 @@ case+ x0 of
 | D0GUAmat _ => "D0GUAmat"
 )
 
-
-implement
-nameof_d0exp_node(x0) = "d0exp_node"
 
 implement
 nameof_tag_d0exp_node(x0) =
@@ -413,9 +394,6 @@ case+ x0 of
 | WTHS0EXPsome _ => "WTHS0EXPsome"
 )
 
-
-implement
-nameof_d0ecl_node(x0) = "d0ecl_node"
 
 implement
 nameof_tag_d0ecl_node(x0) =
@@ -543,3 +521,83 @@ nameof_tag_d0cstdecl(x0) = "D0CSTDECL"
 where
   val+D0CSTDECL(rcd) = x0
 end
+
+
+//
+
+implement nameof_val<a0typlst> = nameof_a0typlst
+implement nameof_val<a0typopt> = nameof_a0typopt
+implement nameof_val<a0typlstopt> = nameof_a0typlstopt
+implement nameof_val<d0patlst> = nameof_d0patlst
+implement nameof_val<d0gualst> = nameof_d0gualst
+implement nameof_val<d0cstdeclist> = nameof_d0cstdeclist
+implement nameof_val<d0arglst> = nameof_d0arglst
+implement nameof_val<d0explst> = nameof_d0explst
+implement nameof_val<d0eclist> = nameof_d0eclist
+implement nameof_val<d0claulst> = nameof_d0claulst
+implement nameof_val<q0arglst> = nameof_q0arglst
+implement nameof_val<f0arglst> = nameof_f0arglst
+implement nameof_val<tq0arglst> = nameof_tq0arglst
+implement nameof_val<sq0arglst> = nameof_sq0arglst
+implement nameof_val<ti0arglst> = nameof_ti0arglst
+implement nameof_val<labd0explst> = nameof_labd0explst
+implement nameof_val<labd0patlst> = nameof_labd0patlst
+implement nameof_val<f0undeclist> = nameof_f0undeclist
+implement nameof_val<v0aldeclist> = nameof_v0aldeclist
+implement nameof_val<v0ardeclist> = nameof_v0ardeclist
+implement nameof_val<d0expopt> = nameof_d0expopt
+implement nameof_val<labd0pat> = nameof_labd0pat
+implement nameof_val<labd0exp> = nameof_labd0exp
+(* implement nameof_val<dl0abeled> = nameof_dl0abeled<> *)
+
+implement nameof_val<q0arg> = nameof_q0arg
+implement nameof_val<a0typ> = nameof_a0typ
+implement nameof_val<d0arg> = nameof_d0arg
+implement nameof_val<f0arg> = nameof_f0arg
+implement nameof_val<sq0arg> = nameof_sq0arg
+implement nameof_val<tq0arg> = nameof_tq0arg
+implement nameof_val<ti0arg> = nameof_ti0arg
+implement nameof_val<d0pat> = nameof_d0pat
+implement nameof_val<d0clau> = nameof_d0clau
+implement nameof_val<d0gpat> = nameof_d0gpat
+implement nameof_val<d0gua> = nameof_d0gua
+implement nameof_val<d0exp> = nameof_d0exp
+implement nameof_val<d0ecl> = nameof_d0ecl
+
+implement nameof_val<d0pat_RPAREN> = nameof_d0pat_RPAREN
+implement nameof_val<labd0pat_RBRACE> = nameof_labd0pat_RBRACE
+implement nameof_val<d0exp_RPAREN> = nameof_d0exp_RPAREN
+implement nameof_val<labd0exp_RBRACE> = nameof_labd0exp_RBRACE
+implement nameof_val<d0exp_THEN> = nameof_d0exp_THEN
+implement nameof_val<d0exp_ELSE> = nameof_d0exp_ELSE
+implement nameof_val<endwhere> = nameof_endwhere
+implement nameof_val<d0eclseq_WHERE> = nameof_d0eclseq_WHERE
+implement nameof_val<f0unarrow> = nameof_f0unarrow
+implement nameof_val<decmodopt> = nameof_decmodopt
+implement nameof_val<teqd0expopt> = nameof_teqd0expopt
+implement nameof_val<wths0expopt> = nameof_wths0expopt
+implement nameof_val<precopt> = nameof_precopt
+implement nameof_val<signint> = nameof_signint
+implement nameof_val<precmod> = nameof_precmod
+implement nameof_val<abstdf0> = nameof_abstdf0
+implement nameof_val<g0expdef> = nameof_g0expdef
+implement nameof_val<d0macdef> = nameof_d0macdef
+implement nameof_val<wd0eclseq> = nameof_wd0eclseq
+implement nameof_val<v0aldecl> = nameof_v0aldecl
+implement nameof_val<v0ardecl> = nameof_v0ardecl
+implement nameof_val<f0undecl> = nameof_f0undecl
+implement nameof_val<d0cstdecl> = nameof_d0cstdecl
+
+implement nameof_val<q0arg_node> = nameof_q0arg_node
+implement nameof_val<a0typ_node> = nameof_a0typ_node
+implement nameof_val<d0arg_node> = nameof_d0arg_node
+implement nameof_val<f0arg_node> = nameof_f0arg_node
+implement nameof_val<sq0arg_node> = nameof_sq0arg_node
+implement nameof_val<tq0arg_node> = nameof_tq0arg_node
+implement nameof_val<ti0arg_node> = nameof_ti0arg_node
+implement nameof_val<d0pat_node> = nameof_d0pat_node
+implement nameof_val<d0clau_node> = nameof_d0clau_node
+implement nameof_val<d0gpat_node> = nameof_d0gpat_node
+implement nameof_val<d0gua_node> = nameof_d0gua_node
+implement nameof_val<d0exp_node> = nameof_d0exp_node
+implement nameof_val<d0ecl_node> = nameof_d0ecl_node
