@@ -148,3 +148,10 @@ case+ tnd of
 | T_SRP_DYNLOAD _ => "T_SRP_DYNLOAD"
 | T_SRP_SYMLOAD _ => "T_SRP_SYMLOAD"
 )
+
+//
+
+implement nameof_val<tokenopt> = nameof_tokenopt
+implement nameof_val<tokenlst> = nameof_tokenlst
+implement nameof_val<token> = nameof_token
+implement nameof_val<tnode> = nameof_tnode
