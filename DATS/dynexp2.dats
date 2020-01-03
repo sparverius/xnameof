@@ -37,51 +37,37 @@ implement nameof_d2eclist(x) = "d2eclist"
 implement nameof_d2eclistopt(x) = "d2eclistopt"
 
 
-implement
-nameof_d2con(x0) = "d2con"
-implement
-nameof_d2cst(x0) = "d2cst"
-implement
-nameof_d2var(x0) = "d2var"
-implement
-nameof_f2arg(x0) = "f2arg"
-implement
-nameof_d2pat(x0) = "d2pat"
-implement
-nameof_d2exp(x0) = "d2exp"
-implement
-nameof_d2ecl(x0) = "d2ecl"
-implement
-nameof_d2itm(x0) = "d2itm"
-implement
-nameof_d2pitm(x0) = "d2pitm"
-implement
-nameof_sq2arg(x0) = "sq2arg"
-implement
-nameof_tq2arg(x0) = "tq2arg"
-implement
-nameof_ti2arg(x0) = "ti2arg"
-implement
-nameof_impld2cst(x0) = "impld2cst"
-implement
-nameof_impls2cst(x0) = "impls2cst"
-implement
-nameof_d2clau(x0) = "d2clau"
-implement
-nameof_d2gua(x0) = "d2gua"
-implement
-nameof_d2gpat(x0) = "d2gpat"
-implement
-nameof_v2aldecl(x0) = "v2aldecl"
-implement
-nameof_v2ardecl(x0) = "v2ardecl"
-implement
-nameof_f2undecl(x0) = "f2undecl"
+implement nameof_d2con(x0) = "d2con"
+implement nameof_d2cst(x0) = "d2cst"
+implement nameof_d2var(x0) = "d2var"
+implement nameof_f2arg(x0) = "f2arg"
+implement nameof_d2pat(x0) = "d2pat"
+implement nameof_d2exp(x0) = "d2exp"
+implement nameof_d2ecl(x0) = "d2ecl"
+implement nameof_d2itm(x0) = "d2itm"
+implement nameof_d2pitm(x0) = "d2pitm"
+implement nameof_sq2arg(x0) = "sq2arg"
+implement nameof_tq2arg(x0) = "tq2arg"
+implement nameof_ti2arg(x0) = "ti2arg"
+implement nameof_impld2cst(x0) = "impld2cst"
+implement nameof_impls2cst(x0) = "impls2cst"
+implement nameof_d2clau(x0) = "d2clau"
+implement nameof_d2gua(x0) = "d2gua"
+implement nameof_d2gpat(x0) = "d2gpat"
+implement nameof_v2aldecl(x0) = "v2aldecl"
+implement nameof_v2ardecl(x0) = "v2ardecl"
+implement nameof_f2undecl(x0) = "f2undecl"
 
 //
 
-implement
-nameof_f2arg_node(x0) = "f2arg_node"
+implement nameof_f2arg_node(x0) = "f2arg_node"
+implement nameof_d2pat_node(x0) = "d2pat_node"
+implement nameof_d2exp_node(x0) = "d2exp_node"
+implement nameof_d2ecl_node(x0) = "d2ecl_node"
+implement nameof_d2clau_node(x0) = "d2clau_node"
+implement nameof_d2gua_node(x0) = "d2gua_node"
+implement nameof_d2gpat_node(x0) = "d2gpat_node"
+
 
 implement
 nameof_tag_f2arg_node(x0) =
@@ -95,9 +81,6 @@ case+ x0 of
 | F2ARGsome_sta _ => "F2ARGsome_sta"
 )
 
-
-implement
-nameof_d2pat_node(x0) = "d2pat_node"
 
 implement
 nameof_tag_d2pat_node(x0) =
@@ -125,9 +108,6 @@ case x0 of
 | D2Pfree _ => "D2Pfree"
 )
 
-
-implement
-nameof_d2exp_node(x0) = "d2exp_node"
 
 implement
 nameof_tag_d2exp_node(x0) =
@@ -171,9 +151,6 @@ case+ x0 of
 | D2Enone1 _ => "D2Enone1"
 )
 
-
-implement
-nameof_d2ecl_node(x0) = "d2ecl_node"
 
 implement
 nameof_tag_d2ecl_node(x0) =
@@ -243,9 +220,6 @@ case+ x0 of
 
 
 implement
-nameof_d2clau_node(x0) = "d2clau_node"
-
-implement
 nameof_tag_d2clau_node(x0) =
 (
 case+ x0 of
@@ -255,9 +229,6 @@ case+ x0 of
 
 
 implement
-nameof_d2gua_node(x0) = "d2gua_node"
-
-implement
 nameof_tag_d2gua_node(x0) =
 (
 case+ x0 of
@@ -265,9 +236,6 @@ case+ x0 of
 | D2GUAmat _ => "D2GUAmat"
 )
 
-
-implement
-nameof_d2gpat_node(x0) = "d2gpat_node"
 
 implement
 nameof_tag_d2gpat_node(x0) =
@@ -300,3 +268,57 @@ nameof_tag_f2undecl(x0) = let
 in
   "F2UNDECL"
 end
+
+//
+
+implement nameof_val<sq2arglst> = nameof_sq2arglst
+implement nameof_val<tq2arglst> = nameof_tq2arglst
+implement nameof_val<d2conlst> = nameof_d2conlst
+implement nameof_val<d2cstlst> = nameof_d2cstlst
+implement nameof_val<d2cstopt> = nameof_d2cstopt
+implement nameof_val<d2varlst> = nameof_d2varlst
+implement nameof_val<d2varopt> = nameof_d2varopt
+implement nameof_val<d2itmlst> = nameof_d2itmlst
+implement nameof_val<d2pitmlst> = nameof_d2pitmlst
+implement nameof_val<d2patlst> = nameof_d2patlst
+implement nameof_val<f2arglst> = nameof_f2arglst
+implement nameof_val<ti2arglst> = nameof_ti2arglst
+implement nameof_val<d2gualst> = nameof_d2gualst
+implement nameof_val<d2claulst> = nameof_d2claulst
+implement nameof_val<d2explst> = nameof_d2explst
+implement nameof_val<d2expopt> = nameof_d2expopt
+implement nameof_val<d2explstopt> = nameof_d2explstopt
+implement nameof_val<v2aldeclist> = nameof_v2aldeclist
+implement nameof_val<v2ardeclist> = nameof_v2ardeclist
+implement nameof_val<f2undeclist> = nameof_f2undeclist
+implement nameof_val<d2eclist> = nameof_d2eclist
+implement nameof_val<d2eclistopt> = nameof_d2eclistopt
+
+implement nameof_val<d2con> = nameof_d2con
+implement nameof_val<d2cst> = nameof_d2cst
+implement nameof_val<d2var> = nameof_d2var
+implement nameof_val<f2arg> = nameof_f2arg
+implement nameof_val<d2pat> = nameof_d2pat
+implement nameof_val<d2exp> = nameof_d2exp
+implement nameof_val<d2ecl> = nameof_d2ecl
+implement nameof_val<d2itm> = nameof_d2itm
+implement nameof_val<d2pitm> = nameof_d2pitm
+implement nameof_val<sq2arg> = nameof_sq2arg
+implement nameof_val<tq2arg> = nameof_tq2arg
+implement nameof_val<ti2arg> = nameof_ti2arg
+implement nameof_val<impld2cst> = nameof_impld2cst
+implement nameof_val<impls2cst> = nameof_impls2cst
+implement nameof_val<d2clau> = nameof_d2clau
+implement nameof_val<d2gua> = nameof_d2gua
+implement nameof_val<d2gpat> = nameof_d2gpat
+implement nameof_val<v2aldecl> = nameof_v2aldecl
+implement nameof_val<v2ardecl> = nameof_v2ardecl
+implement nameof_val<f2undecl> = nameof_f2undecl
+
+implement nameof_val<f2arg_node> = nameof_f2arg_node
+implement nameof_val<d2pat_node> = nameof_d2pat_node
+implement nameof_val<d2exp_node> = nameof_d2exp_node
+implement nameof_val<d2ecl_node> = nameof_d2ecl_node
+implement nameof_val<d2clau_node> = nameof_d2clau_node
+implement nameof_val<d2gua_node> = nameof_d2gua_node
+implement nameof_val<d2gpat_node> = nameof_d2gpat_node
