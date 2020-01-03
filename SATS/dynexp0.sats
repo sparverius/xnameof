@@ -4,6 +4,7 @@
 #staload "./nameof.sats"
 
 fun{a:type} nameof_dl0abeled : nameof_type(dl0abeled(a))
+overload nameof with nameof_dl0abeled
 
 fun nameof_labd0pat : nameof_type(labd0pat)
 fun nameof_labd0patlst : nameof_type(labd0patlst)
@@ -190,6 +191,7 @@ fun nameof_inner_d0eclist : nameof_type(d0eclist)
 
 
 fun{a:type} nameof_tag_dl0abeled : nameof_type(dl0abeled(a))
+overload nameof_tag with nameof_tag_dl0abeled
 
 fun{} nameof_tag_labd0patlst : nameof_type(labd0patlst)
 overload nameof_tag with nameof_tag_labd0patlst
