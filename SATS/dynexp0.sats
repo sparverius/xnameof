@@ -187,6 +187,27 @@ fun nameof_inner_f0undeclist : nameof_type(f0undeclist)
 fun nameof_inner_d0cstdeclist : nameof_type(d0cstdeclist)
 fun nameof_inner_d0eclist : nameof_type(d0eclist)
 
+overload nameof_inner with nameof_inner_labd0patlst
+overload nameof_inner with nameof_inner_labd0explst
+overload nameof_inner with nameof_inner_q0arglst
+overload nameof_inner with nameof_inner_sq0arglst
+overload nameof_inner with nameof_inner_tq0arglst
+overload nameof_inner with nameof_inner_ti0arglst
+overload nameof_inner with nameof_inner_a0typlst
+overload nameof_inner with nameof_inner_a0typopt
+overload nameof_inner with nameof_inner_a0typlstopt
+overload nameof_inner with nameof_inner_d0arglst
+overload nameof_inner with nameof_inner_f0arglst
+overload nameof_inner with nameof_inner_d0patlst
+overload nameof_inner with nameof_inner_d0claulst
+overload nameof_inner with nameof_inner_d0expopt
+overload nameof_inner with nameof_inner_d0explst
+overload nameof_inner with nameof_inner_d0gualst
+overload nameof_inner with nameof_inner_v0aldeclist
+overload nameof_inner with nameof_inner_v0ardeclist
+overload nameof_inner with nameof_inner_f0undeclist
+overload nameof_inner with nameof_inner_d0cstdeclist
+overload nameof_inner with nameof_inner_d0eclist
 
 
 
