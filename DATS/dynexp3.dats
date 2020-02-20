@@ -189,6 +189,7 @@ case+ x0 of
 | D3Cstatic _ => "D3Cstatic"
 | D3Cextern _ => "D3Cextern"
 | D3Cinclude _ => "D3Cinclude"
+| D3Cstaload _ => "D3Cstaload"
 | D3Clocal _ => "D3Clocal"
 | D3Cvaldecl _ => "D3Cvaldecl"
 | D3Cvardecl _ => "D3Cvardecl"
