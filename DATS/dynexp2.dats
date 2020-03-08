@@ -138,12 +138,14 @@ case+ x0 of
 | D2Ecase _ => "D2Ecase"
 | D2Elam _ => "D2Elam"
 | D2Efix _ => "D2Efix"
+| D2Etry _ => "D2Etry"
 (*
 | D2Eflat _ => "D2Eflat"
 *)
 | D2Eaddr _ => "D2Eaddr"
 | D2Eeval _ => "D2Eeval"
 | D2Efold _ => "D2Efold"
+| D2Eraise _ => "D2Eraise"
 | D2Elazy _ => "D2Elazy"
 | D2Ellazy _ => "D2Ellazy"
 | D2Eanno _ => "D2Eanno"
@@ -174,6 +176,7 @@ case x0 of
 | D2Cimpdecl1 _ => "D2Cimpdecl1"
 | D2Cimpdecl2 _ => "D2Cimpdecl2"
 | D2Cdatasort _ => "D2Cdatasort"
+| D2Cexcptcon _ => "D2Cexcptcon"
 | D2Cdatatype _ => "D2Cdatatype"
 | D2Cdynconst _ => "D2Cdynconst"
 | D2Cnone0 _ => "D2Cnone0"

@@ -26,7 +26,8 @@ case+ dct of
 | DCKpraxi _ => "DCKpraxi"
 | DCKprfun _ => "DCKprfun"
 | DCKprval _ => "DCKprval"
-| DCKcastfn _ => "DCKcastfn"
+| DCKfcast _ => "DCKfcast"
+| DCKunknown _ => "DCKunknown"
 )
 
 implement
@@ -54,7 +55,7 @@ case+ fnk of
 | FNKprfn1 _ => "FNKprfn1"
 | FNKprfun _ => "FNKprfun"
 | FNKpraxi _ => "FNKpraxi"
-| FNKcastfn _ => "FNKcastfn"
+| FNKfcast _ => "FNKfcast"
 )
 
 

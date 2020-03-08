@@ -194,6 +194,7 @@ case+ x0 of
 | D1Efix _ => "D1Efix"
 | D1Erecord _ => "D1Erecord"
 | D1Erecord (_,_) => "D1Erecord"
+| D1Etry _ => "D1Etry"
 | D1Eanno _ => "D1Eanno"
 | D1Equal _ => "D1Equal"
 | D1Enone _ => "D1Enone"
@@ -204,8 +205,8 @@ implement
 nameof_tag_d1ecl_node(x0) =
 (
 case+ x0 of
-| D1Cnone _ => "D1Cnone"
-| D1Cnone () => "D1Cnone"
+| D1Cnone0() => "D1Cnone0"
+| D1Cnone1 _ => "D1Cnone1"
 | D1Cstatic _ => "D1Cstatic"
 | D1Cextern _ => "D1Cextern"
 | D1Cdefine _ => "D1Cdefine"
@@ -224,6 +225,7 @@ case+ x0 of
 | D1Cimpdecl _ => "D1Cimpdecl"
 | D1Csymload _ => "D1Csymload"
 | D1Cdatasort _ => "D1Cdatasort"
+| D1Cexcptcon _ => "D1Cexcptcon"
 | D1Cdatatype _ => "D1Cdatatype"
 | D1Cdynconst _ => "D1Cdynconst"
 | D1Clocal _ => "D1Clocal"
