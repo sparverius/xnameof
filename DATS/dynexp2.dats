@@ -106,6 +106,8 @@ case x0 of
 //
 | D2Pflat _ => "D2Pflat"
 | D2Pfree _ => "D2Pfree"
+//
+| D2Pbang _ => "D2Pbang"
 )
 
 
@@ -151,6 +153,7 @@ case+ x0 of
 | D2Eanno _ => "D2Eanno"
 | D2Enone0 _ => "D2Enone0"
 | D2Enone1 _ => "D2Enone1"
+| D2Efree _ => "D2Efree"
 )
 
 
@@ -181,6 +184,8 @@ case x0 of
 | D2Cdynconst _ => "D2Cdynconst"
 | D2Cnone0 _ => "D2Cnone0"
 | D2Cnone1 _ => "D2Cnone1"
+//
+| D2Cabsopen _ => "D2Cabsopen"
 )
 
 

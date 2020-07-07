@@ -132,3 +132,15 @@ overload nameof_tag with nameof_tag_d3ecl_node
 
 fun nameof_d3ecl_node : nameof_type(d3ecl_node)
 overload nameof with nameof_d3ecl_node
+
+
+
+///
+fun nameof_t3cst : nameof_type(t3cst)
+fun nameof_t3cstlst : nameof_type(t3cstlst)
+overload nameof with nameof_t3cst
+overload nameof with nameof_t3cstlst
+
+fun nameof_tag_t3cst : nameof_type(t3cst)
+overload nameof_tag with nameof_tag_t3cst
+///

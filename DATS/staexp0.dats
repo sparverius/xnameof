@@ -214,6 +214,7 @@ nameof_tag_g0exp_node(x0) =
 (
 case+ x0 of
 | G0Eid _ => "G0Eid"
+| G0Estr _ => "G0Estr"
 | G0Eint _ => "G0Eint"
 | G0Eapps _ => "G0Eapps"
 | G0Elist _ => "G0Elist"
@@ -235,7 +236,7 @@ implement
 nameof_tag_sort0_node(x0) =
 (
 case+ x0 of
-| S0Tid _ => "S0Tid"
+| S0Tid0 _ => "S0Tid0"
 | S0Tint _ => "S0Tint"
 | S0Tapps _ => "S0Tapps"
 | S0Tlist _ => "S0Tlist"
@@ -292,6 +293,7 @@ implement
 nameof_tag_t0arg_node(x0) =
 (
 case+ x0 of
+| T0ARGnone _ => "T0ARGnone"
 | T0ARGsome _ => "T0ARGsome"
 )
 

@@ -230,6 +230,12 @@ case+ x0 of
 | D1Cdynconst _ => "D1Cdynconst"
 | D1Clocal _ => "D1Clocal"
 | D1Ctokerr _ => "D1Ctokerr"
+//
+| D1Cabsopen _ => "D1Cabsopen"
+| D1Celse _ => "D1Celse"
+| D1Cendif _ => "D1Cendif"
+| D1Cifdec _ => "D1Cifdec"
+| D1Celsif _ => "D1Celsif"
 )
 
 

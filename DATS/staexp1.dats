@@ -92,6 +92,7 @@ nameof_tag_g1exp_node(x0) =
 case+ x0 of
 | G1Eid _ => "G1Eid"
 | G1Eint _ => "G1Eint"
+| G1Estr _ => "G1Estr"
 | G1Eapp _ => "G1Eapp"
 | G1Eapp1 _ => "G1Eapp1"
 | G1Eapp2 _ => "G1Eapp2"
@@ -113,7 +114,7 @@ implement
 nameof_tag_sort1_node(x0) =
 (
 case+ x0 of
-| S1Tid _ => "S1Tid"
+| S1Tid0 _ => "S1Tid0"
 | S1Tint _ => "S1Tint"
 | S1Tapp _ => "S1Tapp"
 (*

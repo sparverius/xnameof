@@ -67,7 +67,7 @@ implement
 nameof_tag_sort2(s2t0) =
 (
 case+ s2t0 of
-| S2Tid _ => "S2Tid"
+| S2Tid0 _ => "S2Tid0"
 | S2Tint _ => "S2Tint"
 | S2Tbas _ => "S2Tbas"
 | S2Ttup _ => "S2Ttup"
@@ -152,6 +152,7 @@ case+ s2e0 of
 | S2Euni _ => "S2Euni"
 | S2Enone0 _ => "S2Enone0"
 | S2Enone1 _ => "S2Enone1"
+| S2Enone2 _ => "S2Enone2"
 )
 
 

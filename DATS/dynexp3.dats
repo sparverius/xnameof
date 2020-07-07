@@ -78,6 +78,8 @@ case+ x0 of
 //
 | D3Pflat _ => "D3Pflat"
 | D3Pfree _ => "D3Pfree"
+//
+| D3Pbang _ => "D3Pbang"
 )
 
 
@@ -144,6 +146,13 @@ case+ x0 of
 | D3Enone2 _ => "D3Enone2"
 //
 | D3Epcon (_,_) => "D3Epcon"
+//
+| D3Evknd _ => "D3Evknd"
+| D3Efcon _ => "D3Efcon"
+| D3Etcon _ => "D3Etcon"
+| D3Etnfd _ => "D3Etnfd"
+| D3Etrec _ => "D3Etrec"
+| D3Efree _ => "D3Efree"
 )
 
 
@@ -201,6 +210,10 @@ case+ x0 of
 | D3Cimpdecl3 _ => "D3Cimpdecl3"
 | D3Cnone0 _ => "D3Cnone0"
 | D3Cnone1 _ => "D3Cnone1"
+//
+| D3Cabstype _ => "D3Cabstype"
+| D3Cabsopen _ => "D3Cabsopen"
+| D3Cabsimpl _ => "D3Cabsimpl"
 )
 
 
@@ -272,3 +285,23 @@ implement nameof_val<d3gua_node> = nameof_d3gua_node
 implement nameof_val<d3clau_node> = nameof_d3clau_node
 implement nameof_val<d3gpat_node> = nameof_d3gpat_node
 implement nameof_val<d3ecl_node> = nameof_d3ecl_node
+
+
+///
+implement nameof_t3cst(x) = "t3cst"
+implement nameof_t3cstlst(x) = "t3cstlst"
+
+implement nameof_val<t3cst> = nameof_t3cst
+implement nameof_val<t3cstlst> = nameof_t3cstlst
+
+implement
+nameof_tag_t3cst(x0) = let
+val x0 = d3exp(x0)
+in
+//
+case- x0.node() of
+| D3Etcst _ => "D3Etcst"
+end
+
+
+///

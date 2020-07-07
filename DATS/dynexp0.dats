@@ -429,6 +429,12 @@ case+ x0 of
 | D0Cdatatype _ => "D0Cdatatype"
 | D0Cdynconst _ => "D0Cdynconst"
 | D0Clocal _ => "D0Clocal"
+//
+| D0Cabsopen _ => "D0Cabsopen"
+| D0Celse _ => "D0Celse"
+| D0Cendif _ => "D0Cendif"
+| D0Cifdec _ => "D0Cifdec"
+| D0Celsif _ => "D0Celsif"
 )
 
 
