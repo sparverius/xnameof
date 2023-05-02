@@ -145,6 +145,7 @@ fun nameof_inner_i0dntlst : nameof_type(i0dntlst)
 fun nameof_inner_i0dntopt : nameof_type(i0dntopt)
 fun nameof_inner_labs0explst : nameof_type(labs0explst)
 fun nameof_inner_g0explst : nameof_type(g0explst)
+fun nameof_inner_g0namlst : nameof_type(g0namlst)
 fun nameof_inner_g0marglst : nameof_type(g0marglst)
 fun nameof_inner_sort0lst : nameof_type(sort0lst)
 fun nameof_inner_sort0opt : nameof_type(sort0opt)
@@ -167,6 +168,7 @@ overload nameof_inner with nameof_inner_i0dntlst
 overload nameof_inner with nameof_inner_i0dntopt
 overload nameof_inner with nameof_inner_labs0explst
 overload nameof_inner with nameof_inner_g0explst
+overload nameof_inner with nameof_inner_g0namlst
 overload nameof_inner with nameof_inner_g0marglst
 overload nameof_inner with nameof_inner_sort0lst
 overload nameof_inner with nameof_inner_sort0opt
@@ -314,3 +316,32 @@ overload nameof_tag with nameof_tag_d0atype_node
 
 fun{a:type} nameof_tag_sl0abled : nameof_type(sl0abled(a))
 overload nameof_tag with nameof_tag_sl0abled
+
+//
+
+fun nameof_inner_g0namlst : nameof_type(g0namlst)
+overload nameof_inner with nameof_inner_g0namlst
+
+fun nameof_g0nam : nameof_type(g0nam)
+fun nameof_g0namlst : nameof_type(g0namlst)
+overload nameof with nameof_g0nam
+overload nameof with nameof_g0namlst
+
+fun nameof_g0exp_THEN : nameof_type(g0exp_THEN)
+fun nameof_g0exp_ELSE : nameof_type(g0exp_ELSE)
+overload nameof with nameof_g0exp_THEN
+overload nameof with nameof_g0exp_ELSE
+
+fun nameof_g0nam_node : nameof_type(g0nam_node)
+fun nameof_tag_g0nam_node : nameof_type(g0nam_node)
+overload nameof with nameof_g0nam_node
+overload nameof_tag with nameof_tag_g0nam_node
+
+//fun nameof_g0exp_THEN_node : nameof_type(g0exp_node)
+//overload nameof with nameof_g0exp_THEN_node
+fun nameof_tag_g0exp_THEN : nameof_type(g0exp_THEN)
+overload nameof_tag with nameof_tag_g0exp_THEN
+// fun nameof_g0exp_ELSE_node : nameof_type(g0exp_node)
+//overload nameof with nameof_g0exp_node
+fun nameof_tag_g0exp_ELSE : nameof_type(g0exp_ELSE)
+overload nameof_tag with nameof_tag_g0exp_ELSE

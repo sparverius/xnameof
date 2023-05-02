@@ -67,6 +67,17 @@ UN = "prelude/SATS/unsafe.sats"
 #staload "./../SATS/stamp0.sats"
 #staload "./../SATS/symbol.sats"
 #staload "./../SATS/filpath.sats"
+  typedef
+  fpath_t = $FP0.filpath
+  macdef
+  dirbase =
+  $FP0.filpath_dirbase
+  macdef
+  fpath_make = $FP0.filpath_make
+  macdef
+  dpath_make = $FP0.dirpath_make
+  macdef
+  fpath_dname = $FP0.filpath_get_dirname
 #staload "./../SATS/staexp0.sats"
 #staload "./../SATS/dynexp0.sats"
 #staload "./../SATS/staexp1.sats"
@@ -719,6 +730,7 @@ val () = (st0.inpfil0 := fp0)
 val
 (pf0 | ()) =
 $FP0.the_filpathlst_push(fp0)
+(*
 val
 d0cs =
 let
@@ -730,6 +742,23 @@ case+ opt of
 | ~Some_vt(d0cs) => d0cs
 | ~None_vt((*void*)) => list_nil()
 end : d0eclist // end-of-val
+*)
+// (*
+  val d0cs = let
+    val opt = fileref_open_opt(fp0.full1(), file_mode_r)
+  in
+    case+ opt of
+    | ~None_vt() => list_nil()
+    | ~Some_vt(filr) => d0cs where
+      {
+        val d0cs = parse_from_fileref_toplevel
+        (
+          0(*static*), filr(*input*)
+        )
+        val ((*void*)) = fileref_close(filr)
+      }
+   end : d0eclist // end of [val]
+// *)
 //
 prval () = $UN.castview0{void}(pf0)
 (*

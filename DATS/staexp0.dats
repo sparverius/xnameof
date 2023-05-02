@@ -46,6 +46,8 @@ implement nameof_i0dntopt(x) = "i0dntopt"
 implement nameof_s0expopt(x) = "s0expopt"
 implement nameof_t0intopt(x) = "t0intopt"
 
+implement nameof_g0namlst(x) = "g0namlst"
+
 //
 
 implement nameof_inner_labs0explst(x) = "labs0exp"
@@ -128,6 +130,30 @@ implement nameof_d0atype_node(x0) = "d0atype_node"
 implement nameof_d0atcon_node(x0) = "d0atcon_node"
 
 
+
+implement nameof_inner_g0namlst(x) = "g0nam"
+
+implement nameof_g0nam(x0) = "g0nam"
+implement nameof_g0nam_node(x0) = "g0nam_node"
+
+implement
+nameof_tag_g0nam_node(x0) =
+(
+case+ x0 of
+| G0Nid0 _ => "G0Nid0"
+| G0Nint _ => "G0Nint"
+| G0Nchr _ => "G0Nchr"
+| G0Nflt _ => "G0Nflt"
+| G0Nstr _ => "G0Nstr"
+| G0Nlist _ => "G0Nlist"
+| G0Nnone1 _ => "G0Nnone1"
+)
+
+implement nameof_val<g0namlst> = nameof_g0namlst
+implement nameof_val<g0nam> = nameof_g0nam
+implement nameof_val<g0nam_node> = nameof_g0nam_node
+
+
 implement
 nameof_tag_t0int_node(x0) =
 (
@@ -187,7 +213,7 @@ nameof_tag_s0ymb_node(x0) =
 (
 case+ x0 of
 | S0YMBi0dnt _ => "S0YMBi0dnt"
-| S0YMBdtlab _ => "S0YMBdtlab"
+//| S0YMBdtlab _ => "S0YMBdtlab"
 | S0YMBbrack _ => "S0YMBbrack"
 )
 
@@ -213,12 +239,33 @@ implement
 nameof_tag_g0exp_node(x0) =
 (
 case+ x0 of
-| G0Eid _ => "G0Eid"
+| G0Eid0 _ => "G0Eid0"
+//
+| G0Echr _ => "G0Echr"
+| G0Eflt _ => "G0Eflt"
+| G0Eif0 _ => "G0Eif0"
+//
 | G0Estr _ => "G0Estr"
 | G0Eint _ => "G0Eint"
 | G0Eapps _ => "G0Eapps"
 | G0Elist _ => "G0Elist"
-| G0Enone _ => "G0Enone"
+| G0Enone1 _ => "G0Enone1"
+)
+
+implement nameof_g0exp_THEN(x) = "g0exp_THEN"
+implement nameof_g0exp_ELSE(x) = "g0exp_ELSE"
+
+implement
+nameof_tag_g0exp_THEN(x0) =
+(
+case+ x0 of
+| g0exp_THEN _ => "g0exp_THEN"
+)
+implement
+nameof_tag_g0exp_ELSE(x0) =
+(
+case+ x0 of
+| g0exp_ELSE _ => "g0exp_ELSE"
 )
 
 
@@ -239,7 +286,8 @@ case+ x0 of
 | S0Tid0 _ => "S0Tid0"
 | S0Tint _ => "S0Tint"
 | S0Tapps _ => "S0Tapps"
-| S0Tlist _ => "S0Tlist"
+| S0Tlpar _ => "S0Tlpar"
+//| S0Tlist _ => "S0Tlist"
 | S0Tqual _ => "S0Tqual"
 | S0Tnone _ => "S0Tnone"
 )
@@ -337,7 +385,7 @@ implement
 nameof_tag_s0exp_node(x0) =
 (
 case+ x0 of
-| S0Eid _ => "S0Eid"
+| S0Eid0 _ => "S0Eid0"
 | S0Eop1 _ => "S0Eop1"
 | S0Eop2 _ => "S0Eop2"
 | S0Eint _ => "S0Eint"
@@ -346,11 +394,11 @@ case+ x0 of
 | S0Estr _ => "S0Estr"
 | S0Eapps _ => "S0Eapps"
 | S0Eimp _ => "S0Eimp"
-| S0Eparen _ => "S0Eparen"
+| S0Elpar _ => "S0Elpar"
 | S0Eforall _ => "S0Eforall"
 | S0Eexists _ => "S0Eexists"
-| S0Etuple _ => "S0Etuple"
-| S0Erecord _ => "S0Erecord"
+| S0Etrcd1 _ => "S0Etrcd1"
+| S0Etrcd2 _ => "S0Etrcd2"
 | S0Elam _ => "S0Elam"
 | S0Eanno _ => "S0Eanno"
 | S0Equal _ => "S0Equal"
@@ -404,6 +452,7 @@ case+ x0 of
 )
 
 
+
 //
 implement nameof_val<labs0explst> = nameof_labs0explst
 implement nameof_val<d0tsortlst> = nameof_d0tsortlst
@@ -417,6 +466,7 @@ implement nameof_val<t0arglst> = nameof_t0arglst
 implement nameof_val<s0rtconlst> = nameof_s0rtconlst
 implement nameof_val<d0atconlst> = nameof_d0atconlst
 implement nameof_val<sort0opt> = nameof_sort0opt
+implement nameof_val<g0namlst> = nameof_g0namlst
 implement nameof_val<g0explst> = nameof_g0explst
 implement nameof_val<g0marglst> = nameof_g0marglst
 implement nameof_val<t0marglst> = nameof_t0marglst
@@ -435,6 +485,7 @@ implement nameof_val<t0str> = nameof_t0str
 implement nameof_val<i0dnt> = nameof_i0dnt
 implement nameof_val<l0abl> = nameof_l0abl
 implement nameof_val<s0ymb> = nameof_s0ymb
+implement nameof_val<g0nam> = nameof_g0nam
 implement nameof_val<g0exp> = nameof_g0exp
 implement nameof_val<sq0eid> = nameof_sq0eid
 implement nameof_val<dq0eid> = nameof_dq0eid
@@ -465,6 +516,7 @@ implement nameof_val<t0str_node> = nameof_t0str_node
 implement nameof_val<i0dnt_node> = nameof_i0dnt_node
 implement nameof_val<l0abl_node> = nameof_l0abl_node
 implement nameof_val<s0ymb_node> = nameof_s0ymb_node
+implement nameof_val<g0nam_node> = nameof_g0nam_node
 implement nameof_val<g0exp_node> = nameof_g0exp_node
 implement nameof_val<g0marg_node> = nameof_g0marg_node
 implement nameof_val<sort0_node> = nameof_sort0_node

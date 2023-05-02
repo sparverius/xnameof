@@ -8,6 +8,7 @@
 #staload "{$x}/SATS/staexp0.sats"
 *)
 #staload "{$x}/SATS/staexp1.sats"
+#staload "{$x}/DATS/gmacro1_define.dats"
 
 #staload "./../SATS/nameof.sats"
 (*
@@ -86,18 +87,87 @@ implement nameof_d1atype_node(x0) = "d1atype_node"
 implement nameof_d1atcon_node(x0) = "d1atcon_node"
 
 
+//implement nameof_inner_g1maclst(x) = "g1mac"
+
+implement nameof_g1mac(x1) = "g1mac"
+
+implement
+nameof_tag_g1mac_node(x0) =
+(
+case+ x0 of
+//| _ => "g1mac_tag ==> UNIMPLEMENTED"
+//(*
+| G1Mid0 _ => "G1Mid0"
+| G1Mint _ => "G1Mint"
+| G1Mbtf _ => "G1Mbtf"
+| G1Mchr _ => "G1Mchr"
+| G1Mstr _ => "G1Mstr"
+| G1Mif0 _ => "G1Mif0"
+| G1Mlam0 _ => "G1Mlam0"
+| G1Mapps _ => "G1Mapps"
+| G1Msubs _ => "G1Msubs"
+| G1Msexp _ => "G1Msexp"
+| G1Mdpat _ => "G1Mdpat"
+| G1Mdexp _ => "G1Mdexp"
+| G1Mnone0 _ => "G1Mnone0"
+| G1Mnone1 _ => "G1Mnone1"
+//*)
+)
+
+//implement nameof_val<g1maclst> = nameof_g1maclst
+implement nameof_val<g1mac> = nameof_g1mac
+//implement nameof_val<g1mac_node> = nameof_g1mac_node
+
+
+//
+
+implement nameof_inner_g1namlst(x) = "g1nam"
+implement nameof_inner_g1namopt(x) = "g1nam"
+
+implement nameof_g1nam(x1) = "g1nam"
+implement nameof_g1namlst(x1) = "g1namlst"
+implement nameof_g1namopt(x1) = "g1namopt"
+
+implement
+nameof_tag_g1nam_node(x0) =
+(
+case+ x0 of
+| G1Nnil _ => "G1Nnil"
+| G1Nid0 _ => "G1Nid0"
+| G1Nint _ => "G1Nint"
+| G1Nflt _ => "G1Nflt"
+| G1Nstr _ => "G1Nstr"
+| G1Nlist _ => "G1Nlist"
+| G1Nnone0 _ => "G1Nnone0"
+| G1Nnone1 _ => "G1Nnone1"
+)
+
+implement nameof_val<g1namlst> = nameof_g1namlst
+implement nameof_val<g1namopt> = nameof_g1namopt
+implement nameof_val<g1nam> = nameof_g1nam
+//implement nameof_val<g1nam_node> = nameof_g1nam_node
+
+
+
+//
+
+
 implement
 nameof_tag_g1exp_node(x0) =
 (
 case+ x0 of
-| G1Eid _ => "G1Eid"
+| G1Eid0 _ => "G1Eid0"
 | G1Eint _ => "G1Eint"
+| G1Eflt _ => "G1Eflt"
+| G1Echr _ => "G1Echr"
 | G1Estr _ => "G1Estr"
+| G1Eif0 _ => "G1Eif0"
 | G1Eapp _ => "G1Eapp"
 | G1Eapp1 _ => "G1Eapp1"
 | G1Eapp2 _ => "G1Eapp2"
 | G1Elist _ => "G1Elist"
-| G1Enone _ => "G1Enone"
+| G1Enone0 _ => "G1Enone0"
+| G1Enone1 _ => "G1Enone1"
 )
 
 
@@ -222,7 +292,7 @@ implement
 nameof_tag_s1exp_node(x0) =
 (
 case+ x0 of
-| S1Eid _ => "S1Eid"
+| S1Eid0 _ => "S1Eid0"
 | S1Eint _ => "S1Eint"
 | S1Echr _ => "S1Echr"
 | S1Eflt _ => "S1Eflt"
@@ -236,12 +306,12 @@ case+ x0 of
 (*
 | S1Eapp _ =>  "S1Eapp"
 *)
-| S1Elist _ => "S1Elist"
-| S1Elist(_) => "S1Elist"
-| S1Etuple _ => "S1Etuple"
-| S1Etuple(_,_) => "S1Etulpe"
-| S1Erecord _ => "S1Erecord"
-| S1Erecord(_,_) => "S1Erecord"
+| S1El1st _ => "S1El1st"
+| S1El2st (_, _) => "S1El2st"
+| S1Etrcd1 (_, _) => "S1Etrcd1"
+| S1Etrcd1 (_, _, _) => "S1Etrcd1"
+| S1Etrcd2 (_, _) => "S1Etrcd2"
+| S1Etrcd2 (_, _, _) => "S1Etrcd2"
 | S1Eforall _ => "S1Eforall"
 | S1Eexists _ => "S1Eexists"
 | S1Elam _ => "S1Elam"
@@ -277,6 +347,16 @@ nameof_tag_d1atcon_node(x0) =
 case+ x0 of
 | D1ATCON _ => "D1ATCON"
 )
+
+implement nameof_f1unarrow(x0) = "f1unarrow"
+implement
+nameof_tag_f1unarrow(x0) =
+(
+case+ x0 of
+| F1UNARROWdflt _ => "F1UNARROWdflt"
+| F1UNARROWlist _ => "F1UNARROWlist"
+)
+implement nameof_val<f1unarrow> = nameof_f1unarrow
 
 //
 

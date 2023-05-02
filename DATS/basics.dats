@@ -4,7 +4,7 @@
 *)
 
 #include "./../HATS/libxatsopt.hats"
-#staload "{$x}/SATS/basics.sats"
+#staload "{$x}/SATS/xbasics.sats"
 
 #staload "./../SATS/nameof.sats"
 #staload "./../SATS/basics.sats"
@@ -56,6 +56,7 @@ case+ fnk of
 | FNKprfun _ => "FNKprfun"
 | FNKpraxi _ => "FNKpraxi"
 | FNKfcast _ => "FNKfcast"
+| FNKfn2 _ => "FNKfn2"
 )
 
 

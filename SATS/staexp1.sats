@@ -1,8 +1,52 @@
 #include "./../HATS/x.hats"
 #staload "{$x}/SATS/staexp1.sats"
+#staload "{$x}/DATS/gmacro1_define.dats"
 
 #staload "./nameof.sats"
 
+
+fun nameof_inner_g1namlst : nameof_type(g1namlst)
+fun nameof_inner_g1namopt : nameof_type(g1namopt)
+overload nameof_inner with nameof_inner_g1namlst
+overload nameof_inner with nameof_inner_g1namopt
+
+fun nameof_tag_g1nam_node : nameof_type(g1nam)
+overload nameof_tag with nameof_tag_g1nam_node
+//fun nameof_g1nam_node : nameof_type(g1nam)
+//overload nameof with nameof_g1nam_node
+
+fun nameof_g1nam : nameof_type(g1nam)
+fun nameof_g1namlst : nameof_type(g1namlst)
+fun nameof_g1namopt : nameof_type(g1namopt)
+overload nameof with nameof_g1nam
+overload nameof with nameof_g1namlst
+overload nameof with nameof_g1namopt
+
+//
+
+//fun nameof_inner_g1maclst : nameof_type(g1maclst)
+//overload nameof_inner with nameof_inner_g1maclst
+
+fun nameof_tag_g1mac_node : nameof_type(g1mac)
+overload nameof_tag with nameof_tag_g1mac_node
+
+fun nameof_g1mac : nameof_type(g1mac)
+//fun nameof_g1maclst : nameof_type(g1maclst)
+overload nameof with nameof_g1mac
+//overload nameof with nameof_g1maclst
+//
+
+fun nameof_f1unarrow : nameof_type(f1unarrow)
+overload nameof with nameof_f1unarrow
+
+(*
+fun nameof_g1nam : nameof_type(g1nam)
+fun nameof_g1namlst : nameof_type(g1namlst)
+fun nameof_g1namopt : nameof_type(g1namopt)
+overload nameof with nameof_g1nam
+overload nameof with nameof_g1namlst
+overload nameof with nameof_g1namopt
+*)
 
 fun nameof_g1exp : nameof_type(g1exp)
 fun nameof_g1explst : nameof_type(g1explst)
@@ -93,6 +137,16 @@ overload nameof with nameof_d1atypelst
 
 
 (* ****** ****** *)
+
+fun nameof_tag_f1unarrow : nameof_type(f1unarrow)
+overload nameof_tag with nameof_tag_f1unarrow
+
+(*
+fun nameof_g1nam_node : nameof_type(g1nam)
+fun nameof_tag_g1nam_node : nameof_type(g1nam)
+overload nameof with nameof_g1nam_node
+overload nameof_tag with nameof_tag_g1nam_node
+*)
 
 fun nameof_g1exp_node : nameof_type(g1exp_node)
 fun nameof_tag_g1exp_node : nameof_type(g1exp_node)

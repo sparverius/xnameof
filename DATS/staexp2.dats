@@ -38,6 +38,8 @@ implement nameof_labs2explst(x) = "labs2explst"
 //
 
 implement nameof_sort2(s2t0) = "sort2"
+implement nameof_x2knd(x2kn) = "x2knd"
+implement nameof_x2nam(x2kn) = "x2nam"
 implement nameof_t2bas(s2tb) = "t2bas"
 implement nameof_t2abs(x0) = "t2abs"
 implement nameof_t2dat(x0) = "t2dat"
@@ -79,6 +81,20 @@ case+ s2t0 of
 | S2Tnone1 _ => "S2Tnone1"
 )
 
+
+implement nameof_tag_x2knd(tk) =
+(
+case+ tk of
+| X2KNDnone _ => "X2KNDnone"
+| X2KNDsome _ => "X2KNDsome"
+)
+
+implement nameof_tag_x2nam(tn) =
+(
+case+ tn of
+| X2NAMnone _ => "X2NAMnone"
+| X2NAMsome _ => "X2NAMsome"
+)
 
 implement
 nameof_tag_t2bas(s2tb) =
@@ -136,6 +152,12 @@ case+ s2e0 of
 | S2Earg _ => "S2Earg"
 | S2Eatx _ => "S2Eatx"
 | S2Efun _ => "S2Efun"
+
+| S2Ebtf _ => "S2Ebtf"
+| S2Etpz _ => "S2Etpz"
+| S2Et2ype _ => "S2Et2ype"
+| S2Eg1mac (_, _) => "S2Eg1mac"
+
 | S2Ecimp _ => "S2Ecimp"
 | S2Ecprf _ => "S2Ecprf"
 | S2Ectcd _ => "S2Ectcd"
@@ -207,6 +229,8 @@ implement nameof_val<s2expopt> = nameof_s2expopt
 implement nameof_val<labs2explst> = nameof_labs2explst
 
 implement nameof_val<sort2> = nameof_sort2
+implement nameof_val<x2knd> = nameof_x2knd
+implement nameof_val<x2nam> = nameof_x2nam
 implement nameof_val<t2bas> = nameof_t2bas
 implement nameof_val<t2abs> = nameof_t2abs
 implement nameof_val<t2dat> = nameof_t2dat

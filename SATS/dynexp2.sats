@@ -80,20 +80,20 @@ overload nameof with nameof_d2explst
 overload nameof with nameof_d2expopt
 overload nameof with nameof_d2explstopt
 
-fun nameof_v2aldecl : nameof_type(v2aldecl)
-fun nameof_v2aldeclist : nameof_type(v2aldeclist)
-overload nameof with nameof_v2aldecl
-overload nameof with nameof_v2aldeclist
+fun nameof_d2valdecl : nameof_type(d2valdecl)
+fun nameof_d2valdeclist : nameof_type(d2valdeclist)
+overload nameof with nameof_d2valdecl
+overload nameof with nameof_d2valdeclist
 
-fun nameof_v2ardecl : nameof_type(v2ardecl)
-fun nameof_v2ardeclist : nameof_type(v2ardeclist)
-overload nameof with nameof_v2ardecl
-overload nameof with nameof_v2ardeclist
+fun nameof_d2vardecl : nameof_type(d2vardecl)
+fun nameof_d2vardeclist : nameof_type(d2vardeclist)
+overload nameof with nameof_d2vardecl
+overload nameof with nameof_d2vardeclist
 
-fun nameof_f2undecl : nameof_type(f2undecl)
-fun nameof_f2undeclist : nameof_type(f2undeclist)
-overload nameof with nameof_f2undecl
-overload nameof with nameof_f2undeclist
+fun nameof_d2fundecl : nameof_type(d2fundecl)
+fun nameof_d2fundeclist : nameof_type(d2fundeclist)
+overload nameof with nameof_d2fundecl
+overload nameof with nameof_d2fundeclist
 
 fun nameof_d2ecl : nameof_type(d2ecl)
 fun nameof_d2eclist : nameof_type(d2eclist)
@@ -179,14 +179,14 @@ fun nameof_d2exp_node : nameof_type(d2exp_node)
 overload nameof with nameof_d2exp_node
 
 
-fun nameof_tag_v2aldecl : nameof_type(v2aldecl)
-overload nameof_tag with nameof_tag_v2aldecl
+fun nameof_tag_d2valdecl : nameof_type(d2valdecl)
+overload nameof_tag with nameof_tag_d2valdecl
 
-fun nameof_tag_v2ardecl : nameof_type(v2ardecl)
-overload nameof_tag with nameof_tag_v2ardecl
+fun nameof_tag_d2vardecl : nameof_type(d2vardecl)
+overload nameof_tag with nameof_tag_d2vardecl
 
-fun nameof_tag_f2undecl : nameof_type(f2undecl)
-overload nameof_tag with nameof_tag_f2undecl
+fun nameof_tag_d2fundecl : nameof_type(d2fundecl)
+overload nameof_tag with nameof_tag_d2fundecl
 
 
 fun nameof_tag_d2ecl_node : nameof_type(d2ecl_node)
@@ -201,3 +201,32 @@ overload nameof_tag with nameof_tag_impls2cst
 
 fun nameof_tag_impld2cst : nameof_type(impld2cst)
 overload nameof_tag with nameof_tag_impld2cst
+
+fun nameof_inner_st2qualst : nameof_type(st2qualst)
+fun nameof_inner_d2typlst : nameof_type(d2typlst)
+overload nameof_inner with nameof_inner_st2qualst
+overload nameof_inner with nameof_inner_d2typlst
+
+fun nameof_tag_st2qua : nameof_type(st2qua)
+overload nameof_tag with nameof_tag_st2qua
+
+fun nameof_tag_st2inv : nameof_type(st2inv)
+overload nameof_tag with nameof_tag_st2inv
+
+fun nameof_d2typ_node : nameof_type(d2typ_node)
+fun nameof_tag_d2typ_node : nameof_type(d2typ_node)
+overload nameof with nameof_d2typ_node
+overload nameof_tag with nameof_tag_d2typ_node
+
+fun nameof_d2typ : nameof_type(d2typ)
+fun nameof_d2typlst : nameof_type(d2typlst)
+overload nameof with nameof_d2typ
+overload nameof with nameof_d2typlst
+
+fun nameof_st2qua : nameof_type(st2qua)
+fun nameof_st2qualst : nameof_type(st2qualst)
+overload nameof with nameof_st2qua
+overload nameof with nameof_st2qualst
+
+fun nameof_st2inv : nameof_type(st2inv)
+overload nameof with nameof_st2inv

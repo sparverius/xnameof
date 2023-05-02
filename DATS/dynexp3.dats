@@ -14,10 +14,11 @@
 
 implement nameof_d3claulst(x) = "d3claulst"
 implement nameof_f3arglst(x) = "f3arglst"
+implement nameof_f3arglstopt(x) = "f3arglstopt"
 implement nameof_d3gualst(x) = "d3gualst"
-implement nameof_v3aldeclist(x) = "v3aldeclist"
-implement nameof_v3ardeclist(x) = "v3ardeclist"
-implement nameof_f3undeclist(x) = "f3undeclist"
+implement nameof_d3valdeclist(x) = "d3valdeclist"
+implement nameof_d3vardeclist(x) = "d3vardeclist"
+implement nameof_d3fundeclist(x) = "d3fundeclist"
 implement nameof_d3eclist(x) = "d3eclist"
 implement nameof_d3eclistopt(x) = "d3eclistopt"
 implement nameof_d3explst(x) = "d3explst"
@@ -36,9 +37,9 @@ implement nameof_d3gpat(x0) = "d3gpat"
 implement nameof_ti3arg(x0) = "ti3arg"
 implement nameof_d3ecl(x0) = "d3ecl"
 implement nameof_t2pcast(x0) = "t2pcast"
-implement nameof_v3aldecl(x0) = "v3aldecl"
-implement nameof_v3ardecl(x0) = "v3ardecl"
-implement nameof_f3undecl(x0) = "f3undecl"
+implement nameof_d3valdecl(x0) = "d3valdecl"
+implement nameof_d3vardecl(x0) = "d3vardecl"
+implement nameof_d3fundecl(x0) = "d3fundecl"
 
 //
 
@@ -58,6 +59,11 @@ case+ x0 of
 | D3Pnil _ => "D3Pnil"
 | D3Pany _ => "D3Pany"
 | D3Pint _ => "D3Pint"
+| D3Pi00 _ => "D3Pi00"
+| D3Pb00 _ => "D3Pb00"
+| D3Pc00 _ => "D3Pc00"
+| D3Ps00 _ => "D3Ps00"
+
 | D3Pbtf _ => "D3Pbtf"
 | D3Pchr _ => "D3Pchr"
 | D3Pflt _ => "D3Pflt"
@@ -67,14 +73,18 @@ case+ x0 of
 | D3Pcon2 _ => "D3Pcon2"
 | D3Psym0 _ => "D3Psym0"
 | D3Pdapp _ => "D3Pdapp"
-| D3Ptuple _ => "D3Ptuple"
+| D3Psap0 _ => "D3Pdsap0"
+| D3Psap1 _ => "D3Pdsap1"
+//| D3Pdap0 _ => "D3Pddap0"
+| D3Pdap1 _ => "D3Pddap1"
+| D3Ptrcd1 _ => "D3Ptrcd1"
 | D3Panno _ => "D3Panno"
 | D3Ptcast _ => "D3Ptcast"
 | D3Pnone0 _ => "D3Pnone0"
 | D3Pnone1 _ => "D3Pnone1"
 | D3Pnone2 _ => "D3Pnone2"
 //
-| D3Psapp _ => "D3Psapp"
+//| D3Psapp _ => "D3Psapp"
 //
 | D3Pflat _ => "D3Pflat"
 | D3Pfree _ => "D3Pfree"
@@ -122,14 +132,34 @@ case+ x0 of
 | D3Elet _ => "D3Elet"
 | D3Ewhere _ => "D3Ewhere"
 | D3Eseqn _ => "D3Eseqn"
-| D3Etuple _ => "D3Etuple"
+
+
+| D3Ei00 _ => "D3Ei00"
+| D3Eb00 _ => "D3Eb00"
+| D3Ec00 _ => "D3Ec00"
+| D3Es00 _ => "D3Es00"
+| D3Ekvar _ => "D3Ekvar"
+| D3Eterr _ => "D3Eterr"
+| D3Epbox _ => "D3Epbox"
+| D3Eplft _ => "D3Eplft"
+| D3Epptr _ => "D3Epptr"
+| D3Etrcd1 _ => "D3Etrcd1"
+| D3Ebrack _ => "D3Ebrack"
+| D3Eif1 _ => "D3Eif1"
+| D3Ecas0 _ => "D3Ecas0"
+| D3Ecas1 _ => "D3Ecas1"
+| D3Etry0 _ => "D3Etry0"
+| D3Eexist1 _ => "D3Eexist1"
+
+
+//| D3Etuple _ => "D3Etuple"
 | D3Eassgn _ => "D3Eassgn"
 | D3Edtsel _ => "D3Edtsel"
 | D3Eif0 _ => "D3Eif0"
-| D3Ecase _ => "D3Ecase"
+//| D3Ecase _ => "D3Ecase"
 | D3Elam _ => "D3Elam"
 | D3Efix _ => "D3Efix"
-| D3Etry _ => "D3Etry"
+//| D3Etry _ => "D3Etry"
 | D3Eaddr _ => "D3Eaddr"
 | D3Efold _ => "D3Efold"
 | D3Eraise _ => "D3Eraise"
@@ -147,11 +177,11 @@ case+ x0 of
 //
 | D3Epcon (_,_) => "D3Epcon"
 //
-| D3Evknd _ => "D3Evknd"
+//| D3Evknd _ => "D3Evknd"
 | D3Efcon _ => "D3Efcon"
 | D3Etcon _ => "D3Etcon"
-| D3Etnfd _ => "D3Etnfd"
-| D3Etrec _ => "D3Etrec"
+//| D3Etnfd _ => "D3Etnfd"
+//| D3Etrec _ => "D3Etrec"
 | D3Efree _ => "D3Efree"
 )
 
@@ -202,12 +232,16 @@ case+ x0 of
 | D3Cinclude _ => "D3Cinclude"
 | D3Cstaload _ => "D3Cstaload"
 | D3Clocal _ => "D3Clocal"
-| D3Cvaldecl _ => "D3Cvaldecl"
-| D3Cvardecl _ => "D3Cvardecl"
-| D3Cfundecl _ => "D3Cfundecl"
-| D3Cimpdecl1 _ => "D3Cimpdecl1"
-| D3Cimpdecl2 _ => "D3Cimpdecl2"
-| D3Cimpdecl3 _ => "D3Cimpdecl3"
+
+| D3Cexcptcon _ => "D3Cexcptcon"
+| D3Cdatatype _ => "D3Cdatatype"
+| D3Cfundclst _ => "D3Cfundclst"
+| D3Cvaldclst _ => "D3Cvaldclst"
+| D3Cvardclst _ => "D3Cvardclst"
+| D3Cimplmnt1 _ => "D3Cimplmnt1"
+| D3Cimplmnt2 _ => "D3Cimplmnt2"
+| D3Cimplmnt3 _ => "D3Cimplmnt3"
+
 | D3Cnone0 _ => "D3Cnone0"
 | D3Cnone1 _ => "D3Cnone1"
 //
@@ -227,26 +261,26 @@ case+ x0 of
 
 
 implement
-nameof_tag_v3aldecl(x0) = let
-  val+V3ALDECL(rcd) = x0
+nameof_tag_d3valdecl(x0) = let
+  val+D3VALDECL(rcd) = x0
 in
-  "V3ALDECL"
+  "D3VALDECL"
 end
 
 
 implement
-nameof_tag_v3ardecl(x0) = let
-  val+V3ARDECL(rcd) = x0
+nameof_tag_d3vardecl(x0) = let
+  val+D3VARDECL(rcd) = x0
 in
-  "V3ARDECL"
+  "D3VARDECL"
 end
 
 
 implement
-nameof_tag_f3undecl(x0) = let
-  val+F3UNDECL(rcd) = x0
+nameof_tag_d3fundecl(x0) = let
+  val+D3FUNDECL(rcd) = x0
 in
-  "F3UNDECL"
+  "D3FUNDECL"
 end
 
 
@@ -254,10 +288,11 @@ end
 
 implement nameof_val<d3claulst> = nameof_d3claulst
 implement nameof_val<f3arglst> = nameof_f3arglst
+implement nameof_val<f3arglstopt> = nameof_f3arglstopt
 implement nameof_val<d3gualst> = nameof_d3gualst
-implement nameof_val<v3aldeclist> = nameof_v3aldeclist
-implement nameof_val<v3ardeclist> = nameof_v3ardeclist
-implement nameof_val<f3undeclist> = nameof_f3undeclist
+implement nameof_val<d3valdeclist> = nameof_d3valdeclist
+implement nameof_val<d3vardeclist> = nameof_d3vardeclist
+implement nameof_val<d3fundeclist> = nameof_d3fundeclist
 implement nameof_val<d3eclist> = nameof_d3eclist
 implement nameof_val<d3eclistopt> = nameof_d3eclistopt
 implement nameof_val<d3explst> = nameof_d3explst
@@ -274,9 +309,9 @@ implement nameof_val<d3gpat> = nameof_d3gpat
 implement nameof_val<ti3arg> = nameof_ti3arg
 implement nameof_val<d3ecl> = nameof_d3ecl
 implement nameof_val<t2pcast> = nameof_t2pcast
-implement nameof_val<v3aldecl> = nameof_v3aldecl
-implement nameof_val<v3ardecl> = nameof_v3ardecl
-implement nameof_val<f3undecl> = nameof_f3undecl
+implement nameof_val<d3valdecl> = nameof_d3valdecl
+implement nameof_val<d3vardecl> = nameof_d3vardecl
+implement nameof_val<d3fundecl> = nameof_d3fundecl
 
 implement nameof_val<d3pat_node> = nameof_d3pat_node
 implement nameof_val<f3arg_node> = nameof_f3arg_node
@@ -288,6 +323,7 @@ implement nameof_val<d3ecl_node> = nameof_d3ecl_node
 
 
 ///
+(*
 implement nameof_t3cst(x) = "t3cst"
 implement nameof_t3cstlst(x) = "t3cstlst"
 
@@ -302,6 +338,6 @@ in
 case- x0.node() of
 | D3Etcst _ => "D3Etcst"
 end
-
+*)
 
 ///
