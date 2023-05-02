@@ -4,7 +4,7 @@
 *)
 
 #include "./../HATS/libxatsopt.hats"
-#staload "{$x}/SATS/basics.sats"
+#staload "{$x}/SATS/xbasics.sats"
 
 #staload "./../SATS/nameof.sats"
 #staload "./../SATS/basics.sats"
@@ -26,7 +26,8 @@ case+ dct of
 | DCKpraxi _ => "DCKpraxi"
 | DCKprfun _ => "DCKprfun"
 | DCKprval _ => "DCKprval"
-| DCKcastfn _ => "DCKcastfn"
+| DCKfcast _ => "DCKfcast"
+| DCKunknown _ => "DCKunknown"
 )
 
 implement
@@ -54,7 +55,8 @@ case+ fnk of
 | FNKprfn1 _ => "FNKprfn1"
 | FNKprfun _ => "FNKprfun"
 | FNKpraxi _ => "FNKpraxi"
-| FNKcastfn _ => "FNKcastfn"
+| FNKfcast _ => "FNKfcast"
+| FNKfn2 _ => "FNKfn2"
 )
 
 

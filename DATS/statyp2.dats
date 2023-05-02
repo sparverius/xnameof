@@ -58,5 +58,15 @@ case+ x0 of
 implement
 nameof_tag_labt2ype(lt2p) =
 (
-case+ lt2p of TLABELED(l0, t2p) => "TLABELED"
+//case+ lt2p of TLABELED(l0, t2p) => "TLABELED"
+case+ lt2p of
+| _  => "ERROR xnameof DATS/statyp2.dats ... was TLABELED ... not sure what it changed to... lol"
 )
+
+//
+
+implement nameof_val<t2xtv> = nameof_t2xtv
+implement nameof_val<t2ypelst> = nameof_t2ypelst
+implement nameof_val<t2ype> = nameof_t2ype
+implement nameof_val<labt2ype> = nameof_labt2ype
+implement nameof_val<labt2ypelst> = nameof_labt2ypelst

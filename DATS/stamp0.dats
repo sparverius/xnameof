@@ -4,7 +4,7 @@
 *)
 
 #include "./../HATS/libxatsopt.hats"
-#staload "{$x}/SATS/stamp0.sats"
+#staload "{$x}/SATS/xstamp0.sats"
 (*
 #staload _ = "{$x}/DATS/stamp0.dats"
 *)

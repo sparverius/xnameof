@@ -35,12 +35,14 @@ case+ tnd of
 | T_IDENT_srp _ => "T_IDENT_srp"
 | T_IDENT_dlr _ => "T_IDENT_dlr"
 | T_IDENT_qual _ => "T_IDENT_qual"
+| T_IDENT _ => "T_IDENT"
+//
 | T_INT1 _ => "T_INT1"
 | T_INT2 _ => "T_INT2"
 | T_INT3 _ => "T_INT3"
-| T_FLOAT1 _ => "T_FLOAT1"
-| T_FLOAT2 _ => "T_FLOAT2"
-| T_FLOAT3 _ => "T_FLOAT3"
+| T_FLT1 _ => "T_FLT1"
+| T_FLT2 _ => "T_FLT2"
+| T_FLT3 _ => "T_FLT3"
 (*
 | T_CHAR _ => "T_CHAR"
 *)
@@ -89,8 +91,10 @@ case+ tnd of
 | T_LBRACK _ => "T_LBRACK"
 | T_RBRACK _ => "T_RBRACK"
 | T_EXISTS _ => "T_EXISTS"
-| T_TUPLE _ => "T_TUPLE"
-| T_RECORD _ => "T_RECORD"
+// | T_TUPLE _ => "T_TUPLE"
+//| T_RECORD _ => "T_RECORD"
+| T_TRCD1 _ => "T_TRCD1"
+| T_TRCD2 _ => "T_TRCD2"
 (*
 | T_STRUCT _ => "T_STRUCT"
 *)
@@ -110,17 +114,24 @@ case+ tnd of
 | T_WITH _ => "T_WITH"
 | T_CASE _ => "T_CASE"
 | T_SCASE _ => "T_SCASE"
-| T_ENDIF _ => "T_ENDIF"
-| T_ENDSIF _ => "T_ENDSIF"
-| T_ENDCASE _ => "T_ENDCASE"
-| T_ENDSCASE _ => "T_ENDSCASE"
+
+| T_ENDIF0 _ => "T_ENDIF0"
+//| T_ENDSIF _ => "T_ENDSIF"
+| T_ENDST _ => "T_ENDST"
+| T_ENDFIX _ => "T_ENDFIX"
+| T_ENDCAS _ => "T_ENDCAS"
+| T_DLR_EXTNAM _ => "T_DLR_EXTNAM"
+| T_DLR_EXISTS _ => "T_DLR_EXISTS"
+
 | T_LAM _ => "T_LAM"
 | T_FIX _ => "T_FIX"
 | T_LET _ => "T_LET"
+| T_TRY _ => "T_TRY"
 | T_WHERE _ => "T_WHERE"
 | T_LOCAL _ => "T_LOCAL"
 | T_ENDLAM _ => "T_ENDLAM"
 | T_ENDLET _ => "T_ENDLET"
+| T_ENDTRY _ => "T_ENDTRY"
 | T_ENDWHERE _ => "T_ENDWHERE"
 | T_ENDLOCAL _ => "T_ENDLOCAL"
 | T_VAL _ => "T_VAL"
@@ -134,11 +145,21 @@ case+ tnd of
 | T_ABSIMPL _ => "T_ABSIMPL"
 | T_ABSOPEN _ => "T_ABSOPEN"
 | T_DATASORT _ => "T_DATASORT"
+| T_EXCPTCON _ => "T_EXCPTCON"
 | T_DATATYPE _ => "T_DATATYPE"
 | T_WITHTYPE _ => "T_WITHTYPE"
+//
+| T_SRP_THEN _ => "T_SRP_THEN"
+| T_SRP_ELSE _ => "T_SRP_ELSE"
+| T_SRP_IFDEC _ => "T_SRP_IFDEC"
+| T_SRP_ELSIF _ => "T_SRP_ELSIF"
+| T_SRP_ENDIF _ => "T_SRP_ENDIF"
+//
 | T_SRP_NONFIX _ => "T_SRP_NONFIX"
 | T_SRP_FIXITY _ => "T_SRP_FIXITY"
-| T_SRP_STACST _ => "T_SRP_STACST"
+//| T_SRP_STACST _ => "T_SRP_STACST"
+| T_STACST0 _ => "T_SRP_STACST"
+//
 | T_SRP_STATIC _ => "T_SRP_STATIC"
 | T_SRP_EXTERN _ => "T_SRP_EXTERN"
 | T_SRP_DEFINE _ => "T_SRP_DEFINE"
@@ -148,3 +169,10 @@ case+ tnd of
 | T_SRP_DYNLOAD _ => "T_SRP_DYNLOAD"
 | T_SRP_SYMLOAD _ => "T_SRP_SYMLOAD"
 )
+
+//
+
+implement nameof_val<tokenopt> = nameof_tokenopt
+implement nameof_val<tokenlst> = nameof_tokenlst
+implement nameof_val<token> = nameof_token
+implement nameof_val<tnode> = nameof_tnode

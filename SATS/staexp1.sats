@@ -1,8 +1,52 @@
 #include "./../HATS/x.hats"
 #staload "{$x}/SATS/staexp1.sats"
+#staload "{$x}/DATS/gmacro1_define.dats"
 
 #staload "./nameof.sats"
 
+
+fun nameof_inner_g1namlst : nameof_type(g1namlst)
+fun nameof_inner_g1namopt : nameof_type(g1namopt)
+overload nameof_inner with nameof_inner_g1namlst
+overload nameof_inner with nameof_inner_g1namopt
+
+fun nameof_tag_g1nam_node : nameof_type(g1nam)
+overload nameof_tag with nameof_tag_g1nam_node
+//fun nameof_g1nam_node : nameof_type(g1nam)
+//overload nameof with nameof_g1nam_node
+
+fun nameof_g1nam : nameof_type(g1nam)
+fun nameof_g1namlst : nameof_type(g1namlst)
+fun nameof_g1namopt : nameof_type(g1namopt)
+overload nameof with nameof_g1nam
+overload nameof with nameof_g1namlst
+overload nameof with nameof_g1namopt
+
+//
+
+//fun nameof_inner_g1maclst : nameof_type(g1maclst)
+//overload nameof_inner with nameof_inner_g1maclst
+
+fun nameof_tag_g1mac_node : nameof_type(g1mac)
+overload nameof_tag with nameof_tag_g1mac_node
+
+fun nameof_g1mac : nameof_type(g1mac)
+//fun nameof_g1maclst : nameof_type(g1maclst)
+overload nameof with nameof_g1mac
+//overload nameof with nameof_g1maclst
+//
+
+fun nameof_f1unarrow : nameof_type(f1unarrow)
+overload nameof with nameof_f1unarrow
+
+(*
+fun nameof_g1nam : nameof_type(g1nam)
+fun nameof_g1namlst : nameof_type(g1namlst)
+fun nameof_g1namopt : nameof_type(g1namopt)
+overload nameof with nameof_g1nam
+overload nameof with nameof_g1namlst
+overload nameof with nameof_g1namopt
+*)
 
 fun nameof_g1exp : nameof_type(g1exp)
 fun nameof_g1explst : nameof_type(g1explst)
@@ -94,96 +138,80 @@ overload nameof with nameof_d1atypelst
 
 (* ****** ****** *)
 
-fun nameof_tag_g1exp_node : nameof_type(g1exp_node)
-overload nameof_tag with nameof_tag_g1exp_node
+fun nameof_tag_f1unarrow : nameof_type(f1unarrow)
+overload nameof_tag with nameof_tag_f1unarrow
+
+(*
+fun nameof_g1nam_node : nameof_type(g1nam)
+fun nameof_tag_g1nam_node : nameof_type(g1nam)
+overload nameof with nameof_g1nam_node
+overload nameof_tag with nameof_tag_g1nam_node
+*)
 
 fun nameof_g1exp_node : nameof_type(g1exp_node)
+fun nameof_tag_g1exp_node : nameof_type(g1exp_node)
 overload nameof with nameof_g1exp_node
-
-
-fun nameof_tag_g1marg_node : nameof_type(g1marg_node)
-overload nameof_tag with nameof_tag_g1marg_node
+overload nameof_tag with nameof_tag_g1exp_node
 
 fun nameof_g1marg_node : nameof_type(g1marg_node)
+fun nameof_tag_g1marg_node : nameof_type(g1marg_node)
 overload nameof with nameof_g1marg_node
-
-
-fun nameof_tag_sort1_node : nameof_type(sort1_node)
-overload nameof_tag with nameof_tag_sort1_node
+overload nameof_tag with nameof_tag_g1marg_node
 
 fun nameof_sort1_node : nameof_type(sort1_node)
+fun nameof_tag_sort1_node : nameof_type(sort1_node)
 overload nameof with nameof_sort1_node
-
-
-fun nameof_tag_s1rtcon_node : nameof_type(s1rtcon_node)
-overload nameof_tag with nameof_tag_s1rtcon_node
+overload nameof_tag with nameof_tag_sort1_node
 
 fun nameof_s1rtcon_node : nameof_type(s1rtcon_node)
+fun nameof_tag_s1rtcon_node : nameof_type(s1rtcon_node)
 overload nameof with nameof_s1rtcon_node
-
-
-fun nameof_tag_d1tsort_node : nameof_type(d1tsort_node)
-overload nameof_tag with nameof_tag_d1tsort_node
+overload nameof_tag with nameof_tag_s1rtcon_node
 
 fun nameof_d1tsort_node : nameof_type(d1tsort_node)
+fun nameof_tag_d1tsort_node : nameof_type(d1tsort_node)
 overload nameof with nameof_d1tsort_node
-
-
-fun nameof_tag_s1arg_node : nameof_type(s1arg_node)
-overload nameof_tag with nameof_tag_s1arg_node
+overload nameof_tag with nameof_tag_d1tsort_node
 
 fun nameof_s1arg_node : nameof_type(s1arg_node)
+fun nameof_tag_s1arg_node : nameof_type(s1arg_node)
 overload nameof with nameof_s1arg_node
-
-
-fun nameof_tag_s1rtdef_node : nameof_type(s1rtdef_node)
-overload nameof_tag with nameof_tag_s1rtdef_node
+overload nameof_tag with nameof_tag_s1arg_node
 
 fun nameof_s1rtdef_node : nameof_type(s1rtdef_node)
+fun nameof_tag_s1rtdef_node : nameof_type(s1rtdef_node)
 overload nameof with nameof_s1rtdef_node
-
-
-fun nameof_tag_s1marg_node : nameof_type(s1marg_node)
-overload nameof_tag with nameof_tag_s1marg_node
+overload nameof_tag with nameof_tag_s1rtdef_node
 
 fun nameof_s1marg_node : nameof_type(s1marg_node)
+fun nameof_tag_s1marg_node : nameof_type(s1marg_node)
 overload nameof with nameof_s1marg_node
-
-
-fun nameof_tag_t1arg_node : nameof_type(t1arg_node)
-overload nameof_tag with nameof_tag_t1arg_node
+overload nameof_tag with nameof_tag_s1marg_node
 
 fun nameof_t1arg_node : nameof_type(t1arg_node)
+fun nameof_tag_t1arg_node : nameof_type(t1arg_node)
 overload nameof with nameof_t1arg_node
-
-
-fun nameof_tag_t1marg_node : nameof_type(t1marg_node)
-overload nameof_tag with nameof_tag_t1marg_node
+overload nameof_tag with nameof_tag_t1arg_node
 
 fun nameof_t1marg_node : nameof_type(t1marg_node)
+fun nameof_tag_t1marg_node : nameof_type(t1marg_node)
 overload nameof with nameof_t1marg_node
-
-
-fun nameof_tag_s1qua_node : nameof_type(s1qua_node)
-overload nameof_tag with nameof_tag_s1qua_node
+overload nameof_tag with nameof_tag_t1marg_node
 
 fun nameof_s1qua_node : nameof_type(s1qua_node)
+fun nameof_tag_s1qua_node : nameof_type(s1qua_node)
 overload nameof with nameof_s1qua_node
-
-
-fun nameof_tag_s1uni_node : nameof_type(s1uni_node)
-overload nameof_tag with nameof_tag_s1uni_node
+overload nameof_tag with nameof_tag_s1qua_node
 
 fun nameof_s1uni_node : nameof_type(s1uni_node)
+fun nameof_tag_s1uni_node : nameof_type(s1uni_node)
 overload nameof with nameof_s1uni_node
-
-
-fun nameof_tag_s1exp_node : nameof_type(s1exp_node)
-overload nameof_tag with nameof_tag_s1exp_node
+overload nameof_tag with nameof_tag_s1uni_node
 
 fun nameof_s1exp_node : nameof_type(s1exp_node)
+fun nameof_tag_s1exp_node : nameof_type(s1exp_node)
 overload nameof with nameof_s1exp_node
-
+overload nameof_tag with nameof_tag_s1exp_node
 
 fun{} nameof_tag_labs1explst : nameof_type(labs1explst)
 overload nameof_tag with nameof_tag_labs1explst
@@ -191,16 +219,12 @@ overload nameof_tag with nameof_tag_labs1explst
 fun nameof_tag_effs1expopt : nameof_type(effs1expopt)
 overload nameof_tag with nameof_tag_effs1expopt
 
-
+fun nameof_d1atcon_node : nameof_type(d1atcon_node)
 fun nameof_tag_d1atcon_node : nameof_type(d1atcon_node)
+overload nameof with nameof_d1atcon_node
 overload nameof_tag with nameof_tag_d1atcon_node
 
-fun nameof_d1atcon_node : nameof_type(d1atcon_node)
-overload nameof with nameof_d1atcon_node
-
-
-fun nameof_tag_d1atype_node : nameof_type(d1atype_node)
-overload nameof_tag with nameof_tag_d1atype_node
-
 fun nameof_d1atype_node : nameof_type(d1atype_node)
+fun nameof_tag_d1atype_node : nameof_type(d1atype_node)
 overload nameof with nameof_d1atype_node
+overload nameof_tag with nameof_tag_d1atype_node

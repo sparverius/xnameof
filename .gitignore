@@ -1,6 +1,5 @@
 *~
-.xq
 BUILD/*.o
-xjsonize
-xjsonize_dats.c
-lib/libxjsonize.a
+bin/xnameof
+xnameof_dats.c
+lib/libxnameof.a

@@ -8,6 +8,11 @@ fun nameof_sort2lst: nameof_type(sort2lst)
 overload nameof with nameof_sort2
 overload nameof with nameof_sort2lst
 
+fun nameof_x2knd: nameof_type(x2knd)
+overload nameof with nameof_x2knd
+fun nameof_x2nam: nameof_type(x2nam)
+overload nameof with nameof_x2nam
+
 fun nameof_t2bas: nameof_type(t2bas)
 overload nameof with nameof_t2bas
 
@@ -76,6 +81,11 @@ overload nameof with nameof_s2itm
 
 fun nameof_tag_sort2: nameof_type(sort2)
 overload nameof_tag with nameof_tag_sort2
+
+fun nameof_tag_x2knd: nameof_type(x2knd)
+overload nameof_tag with nameof_tag_x2knd
+fun nameof_tag_x2nam: nameof_type(x2nam)
+overload nameof_tag with nameof_tag_x2nam
 
 fun nameof_tag_t2bas: nameof_type(t2bas)
 overload nameof_tag with nameof_tag_t2bas

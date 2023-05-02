@@ -46,6 +46,8 @@ implement nameof_i0dntopt(x) = "i0dntopt"
 implement nameof_s0expopt(x) = "s0expopt"
 implement nameof_t0intopt(x) = "t0intopt"
 
+implement nameof_g0namlst(x) = "g0namlst"
+
 //
 
 implement nameof_inner_labs0explst(x) = "labs0exp"
@@ -104,8 +106,53 @@ implement{a}(*tmp*) nameof_sl0abled(x0) = "sl0abled"
 
 //
 
+implement nameof_t0int_node(x0) = "t0int_node"
+implement nameof_t0chr_node(x0) = "t0chr_node"
+implement nameof_t0flt_node(x0) = "t0flt_node"
+implement nameof_t0str_node(x0) = "t0str_node"
+implement nameof_i0dnt_node(x0) = "i0dnt_node"
+implement nameof_l0abl_node(l0) = "l0abl_node"
+implement nameof_s0ymb_node(x0) = "s0ymb_node"
+implement nameof_g0exp_node(x0) = "g0exp_node"
+implement nameof_g0marg_node(x0) = "g0marg_node"
+implement nameof_sort0_node(x0) = "sort0_node"
+implement nameof_s0rtcon_node(x0) = "s0rtcon_node"
+implement nameof_d0tsort_node(x0) = "d0tsort_node"
+implement nameof_s0rtdef_node(x0) = "s0rtdef_node"
+implement nameof_s0arg_node(x0) = "s0arg_node"
+implement nameof_s0marg_node(x0) = "s0marg_node"
+implement nameof_t0arg_node(x0) = "t0arg_node"
+implement nameof_t0marg_node(x0) = "t0marg_node"
+implement nameof_s0qua_node(x0) = "s0qua_node"
+implement nameof_s0uni_node(x0) = "s0uni_node"
+implement nameof_s0exp_node(x0) = "s0exp_node"
+implement nameof_d0atype_node(x0) = "d0atype_node"
+implement nameof_d0atcon_node(x0) = "d0atcon_node"
+
+
+
+implement nameof_inner_g0namlst(x) = "g0nam"
+
+implement nameof_g0nam(x0) = "g0nam"
+implement nameof_g0nam_node(x0) = "g0nam_node"
+
 implement
-nameof_t0int_node(x0) = "t0int_node"
+nameof_tag_g0nam_node(x0) =
+(
+case+ x0 of
+| G0Nid0 _ => "G0Nid0"
+| G0Nint _ => "G0Nint"
+| G0Nchr _ => "G0Nchr"
+| G0Nflt _ => "G0Nflt"
+| G0Nstr _ => "G0Nstr"
+| G0Nlist _ => "G0Nlist"
+| G0Nnone1 _ => "G0Nnone1"
+)
+
+implement nameof_val<g0namlst> = nameof_g0namlst
+implement nameof_val<g0nam> = nameof_g0nam
+implement nameof_val<g0nam_node> = nameof_g0nam_node
+
 
 implement
 nameof_tag_t0int_node(x0) =
@@ -117,9 +164,6 @@ case+ x0 of
 
 
 implement
-nameof_t0chr_node(x0) = "t0chr_node"
-
-implement
 nameof_tag_t0chr_node(x0) =
 (
 case+ x0 of
@@ -127,9 +171,6 @@ case+ x0 of
 | T0CHRsome _ => "T0CHRsome"
 )
 
-
-implement
-nameof_t0flt_node(x0) = "t0flt_node"
 
 implement
 nameof_tag_t0flt_node(x0) =
@@ -141,9 +182,6 @@ case+ x0 of
 
 
 implement
-nameof_t0str_node(x0) = "t0str_node"
-
-implement
 nameof_tag_t0str_node(x0) =
 (
 case+ x0 of
@@ -151,9 +189,6 @@ case+ x0 of
 | T0STRsome _ => "T0STRsome"
 )
 
-
-implement
-nameof_i0dnt_node(x0) = "i0dnt_node"
 
 implement
 nameof_tag_i0dnt_node(x0) =
@@ -165,9 +200,6 @@ case+ x0 of
 
 
 implement
-nameof_l0abl_node(l0) = "l0abl_node"
-
-implement
 nameof_tag_l0abl_node(l0) =
 (
 case+ l0 of
@@ -177,14 +209,11 @@ case+ l0 of
 
 
 implement
-nameof_s0ymb_node(x0) = "s0ymb_node"
-
-implement
 nameof_tag_s0ymb_node(x0) =
 (
 case+ x0 of
 | S0YMBi0dnt _ => "S0YMBi0dnt"
-| S0YMBdtlab _ => "S0YMBdtlab"
+//| S0YMBdtlab _ => "S0YMBdtlab"
 | S0YMBbrack _ => "S0YMBbrack"
 )
 
@@ -207,22 +236,38 @@ case+ x0 of
 
 
 implement
-nameof_g0exp_node(x0) = "g0exp_node"
-
-implement
 nameof_tag_g0exp_node(x0) =
 (
 case+ x0 of
-| G0Eid _ => "G0Eid"
+| G0Eid0 _ => "G0Eid0"
+//
+| G0Echr _ => "G0Echr"
+| G0Eflt _ => "G0Eflt"
+| G0Eif0 _ => "G0Eif0"
+//
+| G0Estr _ => "G0Estr"
 | G0Eint _ => "G0Eint"
 | G0Eapps _ => "G0Eapps"
 | G0Elist _ => "G0Elist"
-| G0Enone _ => "G0Enone"
+| G0Enone1 _ => "G0Enone1"
 )
 
+implement nameof_g0exp_THEN(x) = "g0exp_THEN"
+implement nameof_g0exp_ELSE(x) = "g0exp_ELSE"
 
 implement
-nameof_g0marg_node(x0) = "g0marg_node"
+nameof_tag_g0exp_THEN(x0) =
+(
+case+ x0 of
+| g0exp_THEN _ => "g0exp_THEN"
+)
+implement
+nameof_tag_g0exp_ELSE(x0) =
+(
+case+ x0 of
+| g0exp_ELSE _ => "g0exp_ELSE"
+)
+
 
 implement
 nameof_tag_g0marg_node(x0) =
@@ -235,23 +280,18 @@ case+ x0 of
 
 
 implement
-nameof_sort0_node(x0) = "sort0_node"
-
-implement
 nameof_tag_sort0_node(x0) =
 (
 case+ x0 of
-| S0Tid _ => "S0Tid"
+| S0Tid0 _ => "S0Tid0"
 | S0Tint _ => "S0Tint"
 | S0Tapps _ => "S0Tapps"
-| S0Tlist _ => "S0Tlist"
+| S0Tlpar _ => "S0Tlpar"
+//| S0Tlist _ => "S0Tlist"
 | S0Tqual _ => "S0Tqual"
 | S0Tnone _ => "S0Tnone"
 )
 
-
-implement
-nameof_s0rtcon_node(x0) = "s0rtcon_node"
 
 implement
 nameof_tag_s0rtcon_node(x0) =
@@ -262,18 +302,12 @@ case+ x0 of
 
 
 implement
-nameof_d0tsort_node(x0) = "d0tsort_node"
-
-implement
 nameof_tag_d0tsort_node(x0) =
 (
 case+ x0 of
 | D0TSORT _ => "D0TSORT"
 )
 
-
-implement
-nameof_s0rtdef_node(x0) = "s0rtdef_node"
 
 implement
 nameof_tag_s0rtdef_node(x0) =
@@ -285,9 +319,6 @@ case+ x0 of
 
 
 implement
-nameof_s0arg_node(x0) = "s0arg_node"
-
-implement
 nameof_tag_s0arg_node(x0) =
 (
 case+ x0 of
@@ -295,9 +326,6 @@ case+ x0 of
 | S0ARGsome _ => "S0ARGsome"
 )
 
-
-implement
-nameof_s0marg_node(x0) = "s0marg_node"
 
 implement
 nameof_tag_s0marg_node(x0) =
@@ -310,18 +338,13 @@ case+ x0 of
 
 
 implement
-nameof_t0arg_node(x0) = "t0arg_node"
-
-implement
 nameof_tag_t0arg_node(x0) =
 (
 case+ x0 of
+| T0ARGnone _ => "T0ARGnone"
 | T0ARGsome _ => "T0ARGsome"
 )
 
-
-implement
-nameof_t0marg_node(x0) = "t0marg_node"
 
 implement
 nameof_tag_t0marg_node(x0) =
@@ -333,9 +356,6 @@ case+ x0 of
 
 
 implement
-nameof_s0qua_node(x0) = "s0qua_node"
-
-implement
 nameof_tag_s0qua_node(x0) =
 (
 case+ x0 of
@@ -343,9 +363,6 @@ case+ x0 of
 | S0QUAvars _ => "S0QUAvars"
 )
 
-
-implement
-nameof_s0uni_node(x0) = "s0uni_node"
 
 implement
 nameof_tag_s0uni_node(x0) =
@@ -365,13 +382,10 @@ end
 
 
 implement
-nameof_s0exp_node(x0) = "s0exp_node"
-
-implement
 nameof_tag_s0exp_node(x0) =
 (
 case+ x0 of
-| S0Eid _ => "S0Eid"
+| S0Eid0 _ => "S0Eid0"
 | S0Eop1 _ => "S0Eop1"
 | S0Eop2 _ => "S0Eop2"
 | S0Eint _ => "S0Eint"
@@ -380,11 +394,11 @@ case+ x0 of
 | S0Estr _ => "S0Estr"
 | S0Eapps _ => "S0Eapps"
 | S0Eimp _ => "S0Eimp"
-| S0Eparen _ => "S0Eparen"
+| S0Elpar _ => "S0Elpar"
 | S0Eforall _ => "S0Eforall"
 | S0Eexists _ => "S0Eexists"
-| S0Etuple _ => "S0Etuple"
-| S0Erecord _ => "S0Erecord"
+| S0Etrcd1 _ => "S0Etrcd1"
+| S0Etrcd2 _ => "S0Etrcd2"
 | S0Elam _ => "S0Elam"
 | S0Eanno _ => "S0Eanno"
 | S0Equal _ => "S0Equal"
@@ -396,8 +410,8 @@ implement
 nameof_tag_s0exp_RPAREN(x0) =
 (
 case+ x0 of
-| s0exp_RPAREN_cons0 _ => "s0ex"
-| s0exp_RPAREN_cons1 _ => "s0ex"
+| s0exp_RPAREN_cons0 _ => "s0exp_RPAREN_cons0"
+| s0exp_RPAREN_cons1 _ => "s0exp_RPAREN_cons1"
 )
 
 
@@ -405,8 +419,8 @@ implement
 nameof_tag_labs0exp_RBRACE(x0) =
 (
 case+ x0 of
-| labs0exp_RBRACE_cons0 _ => "labs0ex"
-| labs0exp_RBRACE_cons1 _ => "labs0ex"
+| labs0exp_RBRACE_cons0 _ => "labs0exp_RBRACE_cons0"
+| labs0exp_RBRACE_cons1 _ => "labs0exp_RBRACE_cons1"
 )
 
 
@@ -423,9 +437,6 @@ case+ x0 of
 
 
 implement
-nameof_d0atype_node(x0) = "d0atype_node"
-
-implement
 nameof_tag_d0atype_node(x0) =
 (
 case+ x0 of
@@ -434,11 +445,90 @@ case+ x0 of
 
 
 implement
-nameof_d0atcon_node(x0) = "d0atcon_node"
-
-implement
 nameof_tag_d0atcon_node(x0) =
 (
 case+ x0 of
 | D0ATCON _ => "D0ATCON"
 )
+
+
+
+//
+implement nameof_val<labs0explst> = nameof_labs0explst
+implement nameof_val<d0tsortlst> = nameof_d0tsortlst
+implement nameof_val<d0atypelst> = nameof_d0atypelst
+implement nameof_val<s0arglst> = nameof_s0arglst
+implement nameof_val<s0explst> = nameof_s0explst
+implement nameof_val<s0qualst> = nameof_s0qualst
+implement nameof_val<s0unilst> = nameof_s0unilst
+implement nameof_val<s0marglst> = nameof_s0marglst
+implement nameof_val<t0arglst> = nameof_t0arglst
+implement nameof_val<s0rtconlst> = nameof_s0rtconlst
+implement nameof_val<d0atconlst> = nameof_d0atconlst
+implement nameof_val<sort0opt> = nameof_sort0opt
+implement nameof_val<g0namlst> = nameof_g0namlst
+implement nameof_val<g0explst> = nameof_g0explst
+implement nameof_val<g0marglst> = nameof_g0marglst
+implement nameof_val<t0marglst> = nameof_t0marglst
+implement nameof_val<sort0lst> = nameof_sort0lst
+implement nameof_val<i0dntlst> = nameof_i0dntlst
+implement nameof_val<i0dntopt> = nameof_i0dntopt
+implement nameof_val<s0expopt> = nameof_s0expopt
+implement nameof_val<t0intopt> = nameof_t0intopt
+
+//
+
+implement nameof_val<t0int> = nameof_t0int
+implement nameof_val<t0chr> = nameof_t0chr
+implement nameof_val<t0flt> = nameof_t0flt
+implement nameof_val<t0str> = nameof_t0str
+implement nameof_val<i0dnt> = nameof_i0dnt
+implement nameof_val<l0abl> = nameof_l0abl
+implement nameof_val<s0ymb> = nameof_s0ymb
+implement nameof_val<g0nam> = nameof_g0nam
+implement nameof_val<g0exp> = nameof_g0exp
+implement nameof_val<sq0eid> = nameof_sq0eid
+implement nameof_val<dq0eid> = nameof_dq0eid
+implement nameof_val<g0marg> = nameof_g0marg
+implement nameof_val<sort0> = nameof_sort0
+implement nameof_val<s0rtcon> = nameof_s0rtcon
+implement nameof_val<d0tsort> = nameof_d0tsort
+implement nameof_val<s0rtdef> = nameof_s0rtdef
+implement nameof_val<s0arg> = nameof_s0arg
+implement nameof_val<s0marg> = nameof_s0marg
+implement nameof_val<t0arg> = nameof_t0arg
+implement nameof_val<t0marg> = nameof_t0marg
+implement nameof_val<s0qua> = nameof_s0qua
+implement nameof_val<s0uni> = nameof_s0uni
+implement nameof_val<s0exp> = nameof_s0exp
+implement nameof_val<s0exp_RPAREN> = nameof_s0exp_RPAREN
+implement nameof_val<labs0exp_RBRACE> = nameof_labs0exp_RBRACE
+implement nameof_val<effs0expopt> = nameof_effs0expopt
+implement nameof_val<d0atype> = nameof_d0atype
+implement nameof_val<d0atcon> = nameof_d0atcon
+implement nameof_val<labs0exp> = nameof_labs0exp
+(* implement{a}(*tmp*) nameof_sl0abled(x0) = "sl0abled" *)
+
+implement nameof_val<t0int_node> = nameof_t0int_node
+implement nameof_val<t0chr_node> = nameof_t0chr_node
+implement nameof_val<t0flt_node> = nameof_t0flt_node
+implement nameof_val<t0str_node> = nameof_t0str_node
+implement nameof_val<i0dnt_node> = nameof_i0dnt_node
+implement nameof_val<l0abl_node> = nameof_l0abl_node
+implement nameof_val<s0ymb_node> = nameof_s0ymb_node
+implement nameof_val<g0nam_node> = nameof_g0nam_node
+implement nameof_val<g0exp_node> = nameof_g0exp_node
+implement nameof_val<g0marg_node> = nameof_g0marg_node
+implement nameof_val<sort0_node> = nameof_sort0_node
+implement nameof_val<s0rtcon_node> = nameof_s0rtcon_node
+implement nameof_val<d0tsort_node> = nameof_d0tsort_node
+implement nameof_val<s0rtdef_node> = nameof_s0rtdef_node
+implement nameof_val<s0arg_node> = nameof_s0arg_node
+implement nameof_val<s0marg_node> = nameof_s0marg_node
+implement nameof_val<t0arg_node> = nameof_t0arg_node
+implement nameof_val<t0marg_node> = nameof_t0marg_node
+implement nameof_val<s0qua_node> = nameof_s0qua_node
+implement nameof_val<s0uni_node> = nameof_s0uni_node
+implement nameof_val<s0exp_node> = nameof_s0exp_node
+implement nameof_val<d0atype_node> = nameof_d0atype_node
+implement nameof_val<d0atcon_node> = nameof_d0atcon_node

@@ -13,8 +13,10 @@ overload nameof with nameof_d3patlst
 
 fun nameof_f3arg : nameof_type(f3arg)
 fun nameof_f3arglst : nameof_type(f3arglst)
+fun nameof_f3arglstopt : nameof_type(f3arglstopt)
 overload nameof with nameof_f3arg
 overload nameof with nameof_f3arglst
+overload nameof with nameof_f3arglstopt
 
 fun nameof_d3gua : nameof_type(d3gua)
 fun nameof_d3gualst : nameof_type(d3gualst)
@@ -41,20 +43,20 @@ overload nameof with nameof_d3explstopt
 fun nameof_t2pcast : nameof_type(t2pcast)
 overload nameof with nameof_t2pcast
 
-fun nameof_v3aldecl : nameof_type(v3aldecl)
-fun nameof_v3aldeclist : nameof_type(v3aldeclist)
-overload nameof with nameof_v3aldecl
-overload nameof with nameof_v3aldeclist
+fun nameof_d3valdecl : nameof_type(d3valdecl)
+fun nameof_d3valdeclist : nameof_type(d3valdeclist)
+overload nameof with nameof_d3valdecl
+overload nameof with nameof_d3valdeclist
 
-fun nameof_v3ardecl : nameof_type(v3ardecl)
-fun nameof_v3ardeclist : nameof_type(v3ardeclist)
-overload nameof with nameof_v3ardecl
-overload nameof with nameof_v3ardeclist
+fun nameof_d3vardecl : nameof_type(d3vardecl)
+fun nameof_d3vardeclist : nameof_type(d3vardeclist)
+overload nameof with nameof_d3vardecl
+overload nameof with nameof_d3vardeclist
 
-fun nameof_f3undecl : nameof_type(f3undecl)
-fun nameof_f3undeclist : nameof_type(f3undeclist)
-overload nameof with nameof_f3undecl
-overload nameof with nameof_f3undeclist
+fun nameof_d3fundecl : nameof_type(d3fundecl)
+fun nameof_d3fundeclist : nameof_type(d3fundeclist)
+overload nameof with nameof_d3fundecl
+overload nameof with nameof_d3fundeclist
 
 fun nameof_d3ecl : nameof_type(d3ecl)
 fun nameof_d3eclist : nameof_type(d3eclist)
@@ -117,14 +119,14 @@ overload nameof with nameof_d3exp_node
 fun nameof_tag_t2pcast : nameof_type(t2pcast)
 overload nameof_tag with nameof_tag_t2pcast
 
-fun nameof_tag_v3aldecl : nameof_type(v3aldecl)
-overload nameof_tag with nameof_tag_v3aldecl
+fun nameof_tag_d3valdecl : nameof_type(d3valdecl)
+overload nameof_tag with nameof_tag_d3valdecl
 
-fun nameof_tag_v3ardecl : nameof_type(v3ardecl)
-overload nameof_tag with nameof_tag_v3ardecl
+fun nameof_tag_d3vardecl : nameof_type(d3vardecl)
+overload nameof_tag with nameof_tag_d3vardecl
 
-fun nameof_tag_f3undecl : nameof_type(f3undecl)
-overload nameof_tag with nameof_tag_f3undecl
+fun nameof_tag_d3fundecl : nameof_type(d3fundecl)
+overload nameof_tag with nameof_tag_d3fundecl
 
 
 fun nameof_tag_d3ecl_node : nameof_type(d3ecl_node)
@@ -132,3 +134,17 @@ overload nameof_tag with nameof_tag_d3ecl_node
 
 fun nameof_d3ecl_node : nameof_type(d3ecl_node)
 overload nameof with nameof_d3ecl_node
+
+
+
+///
+(*
+fun nameof_t3cst : nameof_type(t3cst)
+fun nameof_t3cstlst : nameof_type(t3cstlst)
+overload nameof with nameof_t3cst
+overload nameof with nameof_t3cstlst
+
+fun nameof_tag_t3cst : nameof_type(t3cst)
+overload nameof_tag with nameof_tag_t3cst
+*)
+///

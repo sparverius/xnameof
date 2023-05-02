@@ -64,8 +64,6 @@ overload nameof with nameof_d1exp
 overload nameof with nameof_d1explst
 overload nameof with nameof_d1expopt
 
-fun nameof_f1unarrow : nameof_type(f1unarrow)
-overload nameof with nameof_f1unarrow
 
 fun nameof_teqd1expopt : nameof_type(teqd1expopt)
 overload nameof with nameof_teqd1expopt
@@ -73,20 +71,20 @@ overload nameof with nameof_teqd1expopt
 fun nameof_wths1expopt : nameof_type(wths1expopt)
 overload nameof with nameof_wths1expopt
 
-fun nameof_v1aldecl : nameof_type(v1aldecl)
-fun nameof_v1aldeclist : nameof_type(v1aldeclist)
-overload nameof with nameof_v1aldecl
-overload nameof with nameof_v1aldeclist
+fun nameof_d1valdecl : nameof_type(d1valdecl)
+fun nameof_d1valdeclist : nameof_type(d1valdeclist)
+overload nameof with nameof_d1valdecl
+overload nameof with nameof_d1valdeclist
 
-fun nameof_v1ardecl : nameof_type(v1ardecl)
-fun nameof_v1ardeclist : nameof_type(v1ardeclist)
-overload nameof with nameof_v1ardecl
-overload nameof with nameof_v1ardeclist
+fun nameof_d1vardecl : nameof_type(d1vardecl)
+fun nameof_d1vardeclist : nameof_type(d1vardeclist)
+overload nameof with nameof_d1vardecl
+overload nameof with nameof_d1vardeclist
 
-fun nameof_f1undecl : nameof_type(f1undecl)
-fun nameof_f1undeclist : nameof_type(f1undeclist)
-overload nameof with nameof_f1undecl
-overload nameof with nameof_f1undeclist
+fun nameof_d1fundecl : nameof_type(d1fundecl)
+fun nameof_d1fundeclist : nameof_type(d1fundeclist)
+overload nameof with nameof_d1fundecl
+overload nameof with nameof_d1fundeclist
 
 fun nameof_d1cstdecl : nameof_type(d1cstdecl)
 fun nameof_d1cstdeclist : nameof_type(d1cstdeclist)
@@ -202,8 +200,6 @@ fun nameof_d1exp_node : nameof_type(d1exp_node)
 overload nameof with nameof_d1exp_node
 
 
-fun nameof_tag_f1unarrow : nameof_type(f1unarrow)
-overload nameof_tag with nameof_tag_f1unarrow
 
 fun nameof_tag_teqd1expopt : nameof_type(teqd1expopt)
 overload nameof_tag with nameof_tag_teqd1expopt
@@ -211,14 +207,14 @@ overload nameof_tag with nameof_tag_teqd1expopt
 fun nameof_tag_wths1expopt : nameof_type(wths1expopt)
 overload nameof_tag with nameof_tag_wths1expopt
 
-fun nameof_tag_v1aldecl : nameof_type(v1aldecl)
-overload nameof_tag with nameof_tag_v1aldecl
+fun nameof_tag_d1valdecl : nameof_type(d1valdecl)
+overload nameof_tag with nameof_tag_d1valdecl
 
-fun nameof_tag_v1ardecl : nameof_type(v1ardecl)
-overload nameof_tag with nameof_tag_v1ardecl
+fun nameof_tag_d1vardecl : nameof_type(d1vardecl)
+overload nameof_tag with nameof_tag_d1vardecl
 
-fun nameof_tag_f1undecl : nameof_type(f1undecl)
-overload nameof_tag with nameof_tag_f1undecl
+fun nameof_tag_d1fundecl : nameof_type(d1fundecl)
+overload nameof_tag with nameof_tag_d1fundecl
 
 fun nameof_tag_d1cstdecl : nameof_type(d1cstdecl)
 overload nameof_tag with nameof_tag_d1cstdecl
@@ -242,3 +238,32 @@ overload nameof_tag with nameof_tag_labd1patlst
 
 fun{} nameof_tag_labd1explst : nameof_type(labd1explst)
 overload nameof_tag with nameof_tag_labd1explst
+
+fun nameof_inner_st1qualst : nameof_type(st1qualst)
+fun nameof_inner_d1typlst : nameof_type(d1typlst)
+overload nameof_inner with nameof_inner_st1qualst
+overload nameof_inner with nameof_inner_d1typlst
+
+fun nameof_tag_st1qua : nameof_type(st1qua)
+overload nameof_tag with nameof_tag_st1qua
+
+fun nameof_tag_st1inv : nameof_type(st1inv)
+overload nameof_tag with nameof_tag_st1inv
+
+fun nameof_tag_d1typ_node : nameof_type(d1typ_node)
+overload nameof_tag with nameof_tag_d1typ_node
+fun nameof_d1typ_node : nameof_type(d1typ_node)
+overload nameof with nameof_d1typ_node
+
+fun nameof_d1typ : nameof_type(d1typ)
+fun nameof_d1typlst : nameof_type(d1typlst)
+overload nameof with nameof_d1typ
+overload nameof with nameof_d1typlst
+
+fun nameof_st1qua : nameof_type(st1qua)
+fun nameof_st1qualst : nameof_type(st1qualst)
+overload nameof with nameof_st1qua
+overload nameof with nameof_st1qualst
+
+fun nameof_st1inv : nameof_type(st1inv)
+overload nameof with nameof_st1inv

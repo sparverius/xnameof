@@ -4,6 +4,7 @@
 #staload "./nameof.sats"
 
 fun{a:type} nameof_dl0abeled : nameof_type(dl0abeled(a))
+overload nameof with nameof_dl0abeled
 
 fun nameof_labd0pat : nameof_type(labd0pat)
 fun nameof_labd0patlst : nameof_type(labd0patlst)
@@ -117,20 +118,21 @@ overload nameof with nameof_teqd0expopt
 fun nameof_wths0expopt : nameof_type(wths0expopt)
 overload nameof with nameof_wths0expopt
 
-fun nameof_v0aldecl : nameof_type(v0aldecl)
-fun nameof_v0aldeclist : nameof_type(v0aldeclist)
-overload nameof with nameof_v0aldecl
-overload nameof with nameof_v0aldeclist
+fun nameof_d0valdecl : nameof_type(d0valdecl)
+fun nameof_d0valdeclist : nameof_type(d0valdeclist)
+overload nameof with nameof_d0valdecl
+overload nameof with nameof_d0valdeclist
 
-fun nameof_v0ardecl : nameof_type(v0ardecl)
-fun nameof_v0ardeclist : nameof_type(v0ardeclist)
-overload nameof with nameof_v0ardecl
-overload nameof with nameof_v0ardeclist
+fun nameof_d0vardecl : nameof_type(d0vardecl)
+fun nameof_d0vardeclist : nameof_type(d0vardeclist)
+overload nameof with nameof_d0vardecl
+overload nameof with nameof_d0vardeclist
 
-fun nameof_f0undecl : nameof_type(f0undecl)
-fun nameof_f0undeclist : nameof_type(f0undeclist)
-overload nameof with nameof_f0undecl
-overload nameof with nameof_f0undeclist
+fun nameof_d0fundecl : nameof_type(d0fundecl)
+fun nameof_d0fundeclist : nameof_type(d0fundeclist)
+overload nameof with nameof_d0fundecl
+overload nameof with nameof_d0fundeclist
+
 
 fun nameof_d0cstdecl : nameof_type(d0cstdecl)
 fun nameof_d0cstdeclist : nameof_type(d0cstdeclist)
@@ -180,22 +182,74 @@ fun nameof_inner_d0claulst : nameof_type(d0claulst)
 fun nameof_inner_d0expopt : nameof_type(d0expopt)
 fun nameof_inner_d0explst : nameof_type(d0explst)
 fun nameof_inner_d0gualst : nameof_type(d0gualst)
-fun nameof_inner_v0aldeclist : nameof_type(v0aldeclist)
-fun nameof_inner_v0ardeclist : nameof_type(v0ardeclist)
-fun nameof_inner_f0undeclist : nameof_type(f0undeclist)
+fun nameof_inner_d0valdeclist : nameof_type(d0valdeclist)
+fun nameof_inner_d0vardeclist : nameof_type(d0vardeclist)
+fun nameof_inner_d0fundeclist : nameof_type(d0fundeclist)
 fun nameof_inner_d0cstdeclist : nameof_type(d0cstdeclist)
 fun nameof_inner_d0eclist : nameof_type(d0eclist)
 
+overload nameof_inner with nameof_inner_labd0patlst
+overload nameof_inner with nameof_inner_labd0explst
+overload nameof_inner with nameof_inner_q0arglst
+overload nameof_inner with nameof_inner_sq0arglst
+overload nameof_inner with nameof_inner_tq0arglst
+overload nameof_inner with nameof_inner_ti0arglst
+overload nameof_inner with nameof_inner_a0typlst
+overload nameof_inner with nameof_inner_a0typopt
+overload nameof_inner with nameof_inner_a0typlstopt
+overload nameof_inner with nameof_inner_d0arglst
+overload nameof_inner with nameof_inner_f0arglst
+overload nameof_inner with nameof_inner_d0patlst
+overload nameof_inner with nameof_inner_d0claulst
+overload nameof_inner with nameof_inner_d0expopt
+overload nameof_inner with nameof_inner_d0explst
+overload nameof_inner with nameof_inner_d0gualst
+overload nameof_inner with nameof_inner_d0valdeclist
+overload nameof_inner with nameof_inner_d0vardeclist
+overload nameof_inner with nameof_inner_d0fundeclist
+overload nameof_inner with nameof_inner_d0cstdeclist
+overload nameof_inner with nameof_inner_d0eclist
 
 
 
 fun{a:type} nameof_tag_dl0abeled : nameof_type(dl0abeled(a))
+overload nameof_tag with nameof_tag_dl0abeled
 
 fun{} nameof_tag_labd0patlst : nameof_type(labd0patlst)
 overload nameof_tag with nameof_tag_labd0patlst
 
 fun{} nameof_tag_labd0explst : nameof_type(labd0explst)
 overload nameof_tag with nameof_tag_labd0explst
+
+
+fun nameof_inner_st0qualst : nameof_type(st0qualst)
+fun nameof_inner_d0typlst : nameof_type(d0typlst)
+overload nameof_inner with nameof_inner_st0qualst
+overload nameof_inner with nameof_inner_d0typlst
+
+fun nameof_tag_st0qua : nameof_type(st0qua)
+overload nameof_tag with nameof_tag_st0qua
+
+fun nameof_tag_st0inv : nameof_type(st0inv)
+overload nameof_tag with nameof_tag_st0inv
+
+fun nameof_tag_d0typ_node : nameof_type(d0typ_node)
+overload nameof_tag with nameof_tag_d0typ_node
+fun nameof_d0typ_node : nameof_type(d0typ_node)
+overload nameof with nameof_d0typ_node
+
+fun nameof_d0typ : nameof_type(d0typ)
+fun nameof_d0typlst : nameof_type(d0typlst)
+overload nameof with nameof_d0typ
+overload nameof with nameof_d0typlst
+
+fun nameof_st0qua : nameof_type(st0qua)
+fun nameof_st0qualst : nameof_type(st0qualst)
+overload nameof with nameof_st0qua
+overload nameof with nameof_st0qualst
+
+fun nameof_st0inv : nameof_type(st0inv)
+overload nameof with nameof_st0inv
 
 
 fun nameof_tag_q0arg_node : nameof_type(q0arg_node)
@@ -326,14 +380,14 @@ overload nameof_tag with nameof_tag_teqd0expopt
 fun nameof_tag_wths0expopt : nameof_type(wths0expopt)
 overload nameof_tag with nameof_tag_wths0expopt
 
-fun nameof_tag_v0aldecl : nameof_type(v0aldecl)
-overload nameof_tag with nameof_tag_v0aldecl
+fun nameof_tag_d0valdecl : nameof_type(d0valdecl)
+overload nameof_tag with nameof_tag_d0valdecl
 
-fun nameof_tag_v0ardecl : nameof_type(v0ardecl)
-overload nameof_tag with nameof_tag_v0ardecl
+fun nameof_tag_d0vardecl : nameof_type(d0vardecl)
+overload nameof_tag with nameof_tag_d0vardecl
 
-fun nameof_tag_f0undecl : nameof_type(f0undecl)
-overload nameof_tag with nameof_tag_f0undecl
+fun nameof_tag_d0fundecl : nameof_type(d0fundecl)
+overload nameof_tag with nameof_tag_d0fundecl
 
 fun nameof_tag_d0cstdecl : nameof_type(d0cstdecl)
 overload nameof_tag with nameof_tag_d0cstdecl

@@ -39,11 +39,12 @@ implement nameof_f0arglst(x) = "f0arglst"
 implement nameof_tq0arglst(x) = "tq0arglst"
 implement nameof_sq0arglst(x) = "sq0arglst"
 implement nameof_ti0arglst(x) = "ti0arglst"
+implement nameof_st0qualst(x) = "st0qualst"
 implement(*{}*) nameof_labd0explst(x) = "labd0explst"
 implement(*{}*) nameof_labd0patlst(x) = "labd0patlst"
-implement nameof_f0undeclist(x) = "f0undeclist"
-implement nameof_v0aldeclist(x) = "v0aldeclist"
-implement nameof_v0ardeclist(x) = "v0ardeclist"
+implement nameof_d0fundeclist(x) = "d0fundeclist"
+implement nameof_d0valdeclist(x) = "d0valdeclist"
+implement nameof_d0vardeclist(x) = "d0vardeclist"
 implement nameof_d0expopt(x) = "d0expopt"
 
 
@@ -64,11 +65,10 @@ implement nameof_inner_sq0arglst(x) = "sq0arg"
 implement nameof_inner_ti0arglst(x) = "ti0arg"
 implement nameof_inner_labd0patlst(x) = "labd0pat"
 implement nameof_inner_labd0explst(x) = "labd0exp"
-implement nameof_inner_f0undeclist(x) = "f0undecl"
-implement nameof_inner_v0aldeclist(x) = "v0aldecl"
-implement nameof_inner_v0ardeclist(x) = "v0ardecl"
+implement nameof_inner_d0fundeclist(x) = "d0fundecl"
+implement nameof_inner_d0valdeclist(x) = "d0valdecl"
+implement nameof_inner_d0vardeclist(x) = "d0vardecl"
 implement nameof_inner_d0expopt(x) = "d0exp"
-
 
 implement nameof_labd0pat(x) = "labd0pat"
 implement nameof_labd0exp(x) = "labd0exp"
@@ -108,17 +108,70 @@ implement nameof_abstdf0(x0) = "abstdf0"
 implement nameof_g0expdef(x0) = "g0expdef"
 implement nameof_d0macdef(x0) = "d0macdef"
 implement nameof_wd0eclseq(x0) = "wd0eclseq"
-implement nameof_v0aldecl(x0) = "v0aldecl"
-implement nameof_v0ardecl(x0) = "v0ardecl"
-implement nameof_f0undecl(x0) = "f0undecl"
+implement nameof_d0valdecl(x0) = "d0valdecl"
+implement nameof_d0vardecl(x0) = "d0vardecl"
+implement nameof_d0fundecl(x0) = "d0fundecl"
 implement nameof_d0cstdecl(x0) = "d0cstdecl"
 
 
 (* ****** ****** *)
 
 
+implement nameof_q0arg_node(x0) = "q0arg_node"
+implement nameof_a0typ_node(x0) = "a0typ_node"
+implement nameof_d0arg_node(x0) = "d0arg_node"
+implement nameof_f0arg_node(x0) = "f0arg_node"
+implement nameof_sq0arg_node(x0) = "sq0arg_node"
+implement nameof_tq0arg_node(x0) = "tq0arg_node"
+implement nameof_ti0arg_node(x0) = "ti0arg_node"
+implement nameof_d0pat_node(x0) = "d0pat_node"
+implement nameof_d0clau_node(x0) = "d0clau_node"
+implement nameof_d0gpat_node(x0) = "d0gpat_node"
+implement nameof_d0gua_node(x0) = "d0gua_node"
+implement nameof_d0exp_node(x0) = "d0exp_node"
+implement nameof_d0ecl_node(x0) = "d0ecl_node"
+
+
+implement nameof_inner_st0qualst(x) = "st0qua"
+implement nameof_inner_d0typlst(x) = "d0typ"
+
+implement nameof_st0qua(x0) = "st0qua"
+implement nameof_st0inv(x0) = "st0inv"
+
+implement nameof_d0typ(x0) = "d0typ"
+implement nameof_d0typlst(x0) = "d0typlst"
+implement nameof_d0typ_node(x0) = "d0typ_node"
+
 implement
-nameof_q0arg_node(x0) = "q0arg_node"
+nameof_tag_d0typ_node(x0) =
+(
+case+ x0 of
+| D0TYPnone _ => "D0TYPnone"
+| D0TYPsome _ => "D0TYPsome"
+)
+
+implement
+nameof_tag_st0qua(x0) =
+(
+case+ x0 of
+| ST0QUAnone _ => "ST0QUAnone"
+| ST0QUAsome _ => "ST0QUAsome"
+)
+implement
+nameof_tag_st0inv(x0) =
+(
+case+ x0 of
+| ST0INVnone _ => "ST0INVnone"
+| ST0INVsome _ => "ST0INVsome"
+)
+
+implement nameof_val<d0typlst> = nameof_d0typlst
+implement nameof_val<st0qualst> = nameof_st0qualst
+implement nameof_val<d0typ> = nameof_d0typ
+implement nameof_val<st0qua> = nameof_st0qua
+implement nameof_val<st0inv> = nameof_st0inv
+implement nameof_val<d0typ_node> = nameof_d0typ_node
+
 
 implement
 nameof_tag_q0arg_node(x0) =
@@ -132,9 +185,6 @@ case+ x0 of
 
 
 implement
-nameof_a0typ_node(x0) = "a0typ_node"
-
-implement
 nameof_tag_a0typ_node(x0) =
 (
 case+ x0 of
@@ -144,8 +194,6 @@ case+ x0 of
 | A0TYPsome _ => "A0TYPsome"
 )
 
-implement
-nameof_d0arg_node(x0) = "d0arg_node"
 
 implement
 nameof_tag_d0arg_node(x0) =
@@ -159,9 +207,6 @@ case+ x0 of
 
 
 implement
-nameof_f0arg_node(x0) = "f0arg_node"
-
-implement
 nameof_tag_f0arg_node(x0) =
 (
 case+ x0 of
@@ -173,9 +218,6 @@ case+ x0 of
 
 
 implement
-nameof_sq0arg_node(x0) = "sq0arg_node"
-
-implement
 nameof_tag_sq0arg_node(x0) =
 (
 case+ x0 of
@@ -183,8 +225,6 @@ case+ x0 of
 | SQ0ARGsome _ => "SQ0ARGsome"
 )
 
-implement
-nameof_tq0arg_node(x0) = "tq0arg_node"
 
 implement
 nameof_tag_tq0arg_node(x0) =
@@ -194,9 +234,6 @@ case+ x0 of
 | TQ0ARGsome _ => "TQ0ARGsome"
 )
 
-
-implement
-nameof_ti0arg_node(x0) = "ti0arg_node"
 
 implement
 nameof_tag_ti0arg_node(x0) =
@@ -215,13 +252,10 @@ end
 
 
 implement
-nameof_d0pat_node(x0) = "d0pat_node"
-
-implement
 nameof_tag_d0pat_node(x0) =
 (
 case+ x0 of
-| D0Pid _ => "D0Pid"
+| D0Pid0 _ => "D0Pid0"
 | D0Pint _ => "D0Pint"
 | D0Pchr _ => "D0Pchr"
 | D0Pflt _ => "D0Pflt"
@@ -229,8 +263,10 @@ case+ x0 of
 | D0Papps _ => "D0Papps"
 | D0Psqarg _ => "D0Psqarg"
 | D0Pparen _ => "D0Pparen"
-| D0Ptuple _ => "D0Ptuple"
-| D0Precord _ => "D0Precord"
+| D0Ptrcd1 _ => "D0Ptrcd1"
+| D0Ptrcd2 _ => "D0Ptrcd2"
+//| D0Ptuple _ => "D0Ptuple"
+//| D0Precord _ => "D0Precord"
 | D0Panno _ => "D0Panno"
 | D0Pqual _ => "D0Pqual"
 | D0Pnone _ => "D0Pnone"
@@ -256,9 +292,6 @@ case+ x0 of
 
 
 implement
-nameof_d0clau_node(x0) = "d0clau_node"
-
-implement
 nameof_tag_d0clau_node(x0) =
 (
 case+ x0 of
@@ -266,9 +299,6 @@ case+ x0 of
 | D0CLAUclau _ => "D0CLAUclau"
 )
 
-
-implement
-nameof_d0gpat_node(x0) = "d0gpat_node"
 
 implement
 nameof_tag_d0gpat_node(x0) =
@@ -280,9 +310,6 @@ case+ x0 of
 
 
 implement
-nameof_d0gua_node(x0) = "d0gua_node"
-
-implement
 nameof_tag_d0gua_node(x0) =
 (
 case+ x0 of
@@ -292,34 +319,44 @@ case+ x0 of
 
 
 implement
-nameof_d0exp_node(x0) = "d0exp_node"
-
-implement
 nameof_tag_d0exp_node(x0) =
 (
 case+ x0 of
-| D0Eid _ => "D0Eid"
+| D0Eid0 _ => "D0Eid0"
 | D0Eint _ => "D0Eint"
 | D0Echr _ => "D0Echr"
 | D0Eflt _ => "D0Eflt"
 | D0Estr _ => "D0Estr"
 | D0Eapps _ => "D0Eapps"
+
+| D0Eopid _ => "D0Eopid"
+
 | D0Esqarg _ => "D0Esqarg"
 | D0Etqarg _ => "D0Etqarg"
 | D0Eparen _ => "D0Eparen"
-| D0Etuple _ => "D0Etuple"
-| D0Erecord _ => "D0Erecord"
+//| D0Etuple _ => "D0Etuple"
+//| D0Erecord _ => "D0Erecord"
+| D0Etrcd1 _ => "D0Etrcd1"
+| D0Etrcd2 _ => "D0Etrcd2"
+//
 | D0Eif0 _ => "D0Eif0"
-| D0Ecase _ => "D0Ecase"
+| D0Eif1 _ => "D0Eif1"
+| D0Ecas0 _ => "D0Ecas0"
+| D0Ecas1 _ => "D0Ecas1"
+//
 | D0Elet _ => "D0Elet"
 | D0Ewhere _ => "D0Ewhere"
 | D0Ebrack _ => "D0Ebrack"
 | D0Edtsel _ => "D0Edtsel"
 | D0Elam _ => "D0Elam"
 | D0Efix _ => "D0Efix"
+| D0Etry0 _ => "D0Etry0"
 | D0Eanno _ => "D0Eanno"
 | D0Equal _ => "D0Equal"
 | D0Enone _ => "D0Enone"
+//
+| D0Eextnam _ => "D0Eextnam"
+| D0Eexists _ => "D0Eexists"
 )
 
 
@@ -415,9 +452,6 @@ case+ x0 of
 
 
 implement
-nameof_d0ecl_node(x0) = "d0ecl_node"
-
-implement
 nameof_tag_d0ecl_node(x0) =
 (
 case+ x0 of
@@ -440,15 +474,28 @@ case+ x0 of
 | D0Csexpdef _ => "D0Csexpdef"
 | D0Cabstype _ => "D0Cabstype"
 | D0Cabsimpl _ => "D0Cabsimpl"
-| D0Cvaldecl _ => "D0Cvaldecl"
-| D0Cvardecl _ => "D0Cvardecl"
-| D0Cfundecl _ => "D0Cfundecl"
-| D0Cimpdecl _ => "D0Cimpdecl"
+//| D0Cvaldecl _ => "D0Cvaldecl"
+//| D0Cvardecl _ => "D0Cvardecl"
+//| D0Cfundecl _ => "D0Cfundecl"
+//| D0Cimpdecl _ => "D0Cimpdecl"
+//
+| D0Cvaldclst _ => "D0Cvaldclst"
+| D0Cvardclst _ => "D0Cvardclst"
+| D0Cfundclst _ => "D0Cfundclst"
+| D0Cimplmnt0 _ => "D0Cimplmnt0"
+//
 | D0Csymload _ => "D0Csymload"
 | D0Cdatasort _ => "D0Cdatasort"
+| D0Cexcptcon _ => "D0Cexcptcon"
 | D0Cdatatype _ => "D0Cdatatype"
 | D0Cdynconst _ => "D0Cdynconst"
 | D0Clocal _ => "D0Clocal"
+//
+| D0Cabsopen _ => "D0Cabsopen"
+| D0Celse _ => "D0Celse"
+| D0Cendif _ => "D0Cendif"
+| D0Cifdec _ => "D0Cifdec"
+| D0Celsif _ => "D0Celsif"
 )
 
 
@@ -518,23 +565,23 @@ case+ x0 of
 
 
 implement
-nameof_tag_v0aldecl(x0) = "V0ALDECL"
+nameof_tag_d0valdecl(x0) = "D0VALDECL"
 where
-  val+V0ALDECL(rcd) = x0
+  val+D0VALDECL(rcd) = x0
 end
 
 
 implement
-nameof_tag_v0ardecl(x0) = "V0ARDECL"
+nameof_tag_d0vardecl(x0) = "D0VARDECL"
 where
-  val+V0ARDECL(rcd) = x0
+  val+D0VARDECL(rcd) = x0
 end
 
 
 implement
-nameof_tag_f0undecl(x0) = "F0UNDECL"
+nameof_tag_d0fundecl(x0) = "D0FUNDECL"
 where
-  val+F0UNDECL(rcd) = x0
+  val+D0FUNDECL(rcd) = x0
 end
 
 
@@ -543,3 +590,83 @@ nameof_tag_d0cstdecl(x0) = "D0CSTDECL"
 where
   val+D0CSTDECL(rcd) = x0
 end
+
+
+//
+
+implement nameof_val<a0typlst> = nameof_a0typlst
+implement nameof_val<a0typopt> = nameof_a0typopt
+implement nameof_val<a0typlstopt> = nameof_a0typlstopt
+implement nameof_val<d0patlst> = nameof_d0patlst
+implement nameof_val<d0gualst> = nameof_d0gualst
+implement nameof_val<d0cstdeclist> = nameof_d0cstdeclist
+implement nameof_val<d0arglst> = nameof_d0arglst
+implement nameof_val<d0explst> = nameof_d0explst
+implement nameof_val<d0eclist> = nameof_d0eclist
+implement nameof_val<d0claulst> = nameof_d0claulst
+implement nameof_val<q0arglst> = nameof_q0arglst
+implement nameof_val<f0arglst> = nameof_f0arglst
+implement nameof_val<tq0arglst> = nameof_tq0arglst
+implement nameof_val<sq0arglst> = nameof_sq0arglst
+implement nameof_val<ti0arglst> = nameof_ti0arglst
+implement nameof_val<labd0explst> = nameof_labd0explst
+implement nameof_val<labd0patlst> = nameof_labd0patlst
+implement nameof_val<d0fundeclist> = nameof_d0fundeclist
+implement nameof_val<d0valdeclist> = nameof_d0valdeclist
+implement nameof_val<d0vardeclist> = nameof_d0vardeclist
+implement nameof_val<d0expopt> = nameof_d0expopt
+implement nameof_val<labd0pat> = nameof_labd0pat
+implement nameof_val<labd0exp> = nameof_labd0exp
+(* implement nameof_val<dl0abeled> = nameof_dl0abeled<> *)
+
+implement nameof_val<q0arg> = nameof_q0arg
+implement nameof_val<a0typ> = nameof_a0typ
+implement nameof_val<d0arg> = nameof_d0arg
+implement nameof_val<f0arg> = nameof_f0arg
+implement nameof_val<sq0arg> = nameof_sq0arg
+implement nameof_val<tq0arg> = nameof_tq0arg
+implement nameof_val<ti0arg> = nameof_ti0arg
+implement nameof_val<d0pat> = nameof_d0pat
+implement nameof_val<d0clau> = nameof_d0clau
+implement nameof_val<d0gpat> = nameof_d0gpat
+implement nameof_val<d0gua> = nameof_d0gua
+implement nameof_val<d0exp> = nameof_d0exp
+implement nameof_val<d0ecl> = nameof_d0ecl
+
+implement nameof_val<d0pat_RPAREN> = nameof_d0pat_RPAREN
+implement nameof_val<labd0pat_RBRACE> = nameof_labd0pat_RBRACE
+implement nameof_val<d0exp_RPAREN> = nameof_d0exp_RPAREN
+implement nameof_val<labd0exp_RBRACE> = nameof_labd0exp_RBRACE
+implement nameof_val<d0exp_THEN> = nameof_d0exp_THEN
+implement nameof_val<d0exp_ELSE> = nameof_d0exp_ELSE
+implement nameof_val<endwhere> = nameof_endwhere
+implement nameof_val<d0eclseq_WHERE> = nameof_d0eclseq_WHERE
+implement nameof_val<f0unarrow> = nameof_f0unarrow
+implement nameof_val<decmodopt> = nameof_decmodopt
+implement nameof_val<teqd0expopt> = nameof_teqd0expopt
+implement nameof_val<wths0expopt> = nameof_wths0expopt
+implement nameof_val<precopt> = nameof_precopt
+implement nameof_val<signint> = nameof_signint
+implement nameof_val<precmod> = nameof_precmod
+implement nameof_val<abstdf0> = nameof_abstdf0
+implement nameof_val<g0expdef> = nameof_g0expdef
+implement nameof_val<d0macdef> = nameof_d0macdef
+implement nameof_val<wd0eclseq> = nameof_wd0eclseq
+implement nameof_val<d0valdecl> = nameof_d0valdecl
+implement nameof_val<d0vardecl> = nameof_d0vardecl
+implement nameof_val<d0fundecl> = nameof_d0fundecl
+implement nameof_val<d0cstdecl> = nameof_d0cstdecl
+
+implement nameof_val<q0arg_node> = nameof_q0arg_node
+implement nameof_val<a0typ_node> = nameof_a0typ_node
+implement nameof_val<d0arg_node> = nameof_d0arg_node
+implement nameof_val<f0arg_node> = nameof_f0arg_node
+implement nameof_val<sq0arg_node> = nameof_sq0arg_node
+implement nameof_val<tq0arg_node> = nameof_tq0arg_node
+implement nameof_val<ti0arg_node> = nameof_ti0arg_node
+implement nameof_val<d0pat_node> = nameof_d0pat_node
+implement nameof_val<d0clau_node> = nameof_d0clau_node
+implement nameof_val<d0gpat_node> = nameof_d0gpat_node
+implement nameof_val<d0gua_node> = nameof_d0gua_node
+implement nameof_val<d0exp_node> = nameof_d0exp_node
+implement nameof_val<d0ecl_node> = nameof_d0ecl_node
